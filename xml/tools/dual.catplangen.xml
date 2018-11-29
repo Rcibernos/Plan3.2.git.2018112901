@@ -1,0 +1,14 @@
+<form id="dual.catplangen" tablaanexa="DUAL" nbcampoid="DUMMY" nombreexterno="catplangen" nbbtablaoriginal="" ayuda="" sqlcamposvista="" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="10" version="3">
+  <pa id="dual.catplangen|responsive" padreid="dual.catplangen" nombre="responsive" valor="1" sql="" />
+  <pa id="dual.catplangen|responsivestatus" padreid="dual.catplangen" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="dual.catplangen" id="2261" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="dual.catplangen" id="2262" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2261" visible="1" orden="1">
+      <campo id="dual.catplangen|id" tipo="2" titulo="id" campo="ID" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" tipomacro="2" orden="1" ncol="3" primeroenlinea="0">
+        <pa padreid="dual.catplangen|id" nombre="computed" valor="1" sql="" />
+      </campo>
+      <campo id="dual.catplangen|titulo" tipo="1" titulo="TITULO" campo="TITULO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="2" ncol="3" primeroenlinea="0">
+        <pa padreid="dual.catplangen|titulo" nombre="computed" valor="1" sql="" />
+      </campo>
+    </bloque>
+  </tab>
+</form>

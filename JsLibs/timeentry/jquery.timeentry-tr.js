@@ -1,0 +1,1 @@
+(function(a){a.timeEntry.regionalOptions.tr={show24Hours:true,separator:":",ampmPrefix:"",ampmNames:["AM","PM"],spinnerTexts:["su an","önceki alan","sonraki alan","arttir","azalt"]};a.timeEntry.setDefaults(a.timeEntry.regionalOptions.tr)})(jQuery);

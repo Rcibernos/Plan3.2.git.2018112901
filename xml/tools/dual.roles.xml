@@ -1,0 +1,19 @@
+<form id="dual.roles" tablaanexa="DUAL" nbcampoid="DUMMY" nombreexterno="roles" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT Dual.DUMMY&#xD; FROM Dual&#xD; WHERE Dual.DUMMY=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="" version="3">
+  <pa id="dual.roles|responsive" padreid="dual.roles" nombre="responsive" valor="1" sql="" />
+  <pa id="dual.roles|responsivestatus" padreid="dual.roles" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="dual.roles" id="2108" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="dual.roles" id="2110" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2108" visible="1" orden="1">
+      <campo id="dual.roles|rolespersonalizados" tipo="106" titulo="Roles personalizados" campo="ROLESPERSONALIZADOS" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="846" etiqueta="2" tabla="WF_CTTIPOROLPARAMETRIZABLE" formulario_edicion="wf_cttiporolparametrizable.general" alto_formulario="0" ancho_formulario="0" limite_registros="25" formulario_columnas="wf_cttiporolparametrizable.general" con_bajas="0" modo_seleccion="0" contador_de_registros="0" exportar_a_excel="0" nivel_de_agrupacion="0" tamano_de_pagina="" modo_visualizar_formulario_emergente="1" modo_insercion_nuevos_registros="0" expandir_a_lo_alto="0" procedimiento_formulario_asincrono="" paginar_ver_todos="1" validar_grid_encambio_de_pagina="1" condicion="/*[type=SQL]*/&#xD;&#xA;WHERE 1=1" orderby="ORDER BY 2" accion_al_editar="" tipomacro="106" orden="1" ncol="12" primeroenlinea="1">
+        <pa padreid="dual.roles|rolespersonalizados" nombre="check_if_changed" valor="0" sql="" />
+        <pa padreid="dual.roles|rolespersonalizados" nombre="count_reg_txt" valor="¬Roles" sql="" />
+        <pa padreid="dual.roles|rolespersonalizados" nombre="del_reg_tooltip" valor="¬Eliminar rol" sql="" />
+        <pa padreid="dual.roles|rolespersonalizados" nombre="del_reg_txt_confirm" valor="¬Se va a eliminar el rol ¿Es eso lo que quiere hacer?¬" sql="" />
+        <pa padreid="dual.roles|rolespersonalizados" nombre="new_reg_tooltip" valor="¬Nuevo rol" sql="" />
+        <pa padreid="dual.roles|rolespersonalizados" nombre="new_reg_txt" valor="¬Nuevo rol" sql="" />
+        <pa padreid="dual.roles|rolespersonalizados" nombre="no_filas_txt" valor="¬No hay roles personalizados definidos en este proyecto" sql="" />
+        <calculo padreid="dual.roles|rolespersonalizados" tipo="102" bdtipo="102" calculo="/*[type=jscript]*/ &#xA;/*Pre Delete*/&#xA;var checkIfExist = &quot;SELECT COUNT(*) FROM WF_CTFASE &quot; +&#xA;    &quot; JOIN WF_CTTIPOROL ON WF_CTTIPOROL.id=WF_CTFASE.Tipo_Rol &quot; +&#xA;    &quot; JOIN WF_CTTIPOROLPARAMETRIZABLE ON (WF_CTTIPOROLPARAMETRIZABLE.Id = WF_CTTIPOROL.id_tipo and WF_CTTIPOROL.tipo=8)&quot; +&#xA;    &quot; WHERE WF_CTTIPOROLPARAMETRIZABLE.id=&quot; + $sys.idSelected;&#xA;    &#xA;var exists = $db.executeSql(checkIfExist).getValue(0,0);&#xA;if (exists&gt;0) {&#xA;  $this.err='¬El Rol no puede borrarse. Está en uso el alguna fase';&#xA;}" orden="0" asincrono="1" />
+        <calculo padreid="dual.roles|rolespersonalizados" tipo="103" bdtipo="103" calculo="/*[type=jscript]*/ &#xA;var scriptSQL=&quot;DELETE FROM WF_CTTIPOROL WHERE TIPO=8 AND ID_TIPO NOT IN (SELECT ID FROM WF_CTTIPOROLPARAMETRIZABLE)&quot;&#xA;$db.executeCommand(scriptSQL);" orden="0" asincrono="1" />
+      </campo>
+    </bloque>
+  </tab>
+</form>

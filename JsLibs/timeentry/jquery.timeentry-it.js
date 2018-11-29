@@ -1,0 +1,1 @@
+(function(a){a.timeEntry.regionalOptions.it={show24Hours:true,separator:":",ampmPrefix:"",ampmNames:["AM","PM"],spinnerTexts:["Adesso","Precedente","Successivo","Aumenta","Diminuisci"]};a.timeEntry.setDefaults(a.timeEntry.regionalOptions.it)})(jQuery);

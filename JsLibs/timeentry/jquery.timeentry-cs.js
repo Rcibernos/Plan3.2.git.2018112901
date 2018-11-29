@@ -1,0 +1,1 @@
+(function(a){a.timeEntry.regionalOptions.cs={show24Hours:true,separator:":",ampmPrefix:"",ampmNames:["Dop","Odp"],spinnerTexts:["Nyní","Predchozí pole","Následující pole","Zvýšit","Snížit"]};a.timeEntry.setDefaults(a.timeEntry.regionalOptions.cs)})(jQuery);

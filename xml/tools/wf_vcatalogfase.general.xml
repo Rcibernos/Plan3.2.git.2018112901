@@ -1,0 +1,10 @@
+<form id="wf_vcatalogfase.general" tablaanexa="WF_VCATALOGFASE" nbcampoid="ID" nombreexterno="¬General" nbbtablaoriginal="" ayuda="" sqlcamposvista="" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="10" version="3">
+  <pa id="wf_vcatalogfase.general|responsive" padreid="wf_vcatalogfase.general" nombre="responsive" valor="1" sql="" />
+  <pa id="wf_vcatalogfase.general|responsivestatus" padreid="wf_vcatalogfase.general" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="wf_vcatalogfase.general" id="2326" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="wf_vcatalogfase.general" id="2327" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2326" visible="1" orden="1">
+      <campo id="wf_vcatalogfase.general|id" tipo="2" titulo="Id" campo="ID" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" tipomacro="2" orden="1" ncol="1" primeroenlinea="0" />
+      <campo id="wf_vcatalogfase.general|texto" tipo="1" titulo="¬Fase" campo="TEXTO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="100" password="" multilinea="0" tipomacro="1" orden="2" ncol="5" primeroenlinea="0" />
+    </bloque>
+  </tab>
+</form>

@@ -1,0 +1,13 @@
+<form id="cfd_listacalculos.columnas" tablaanexa="CFD_LISTACALCULOS" nbcampoid="ID" nombreexterno="Cálculos" nbbtablaoriginal="" ayuda="" sqlcamposvista="" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="1" condiferencias="0" ncol="10" version="3">
+  <pa id="cfd_listacalculos.columnas|responsive" padreid="cfd_listacalculos.columnas" nombre="responsive" valor="1" sql="" />
+  <pa id="cfd_listacalculos.columnas|responsivestatus" padreid="cfd_listacalculos.columnas" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="cfd_listacalculos.columnas" id="2209" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="cfd_listacalculos.columnas" id="2210" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2209" visible="1" orden="1">
+      <campo id="cfd_listacalculos.columnas|formulario" tipo="1" titulo="Formulario" campo="FORMULARIO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="500" password="" multilinea="0" tipomacro="1" orden="1" ncol="3" primeroenlinea="0" />
+      <campo id="cfd_listacalculos.columnas|elemento" tipo="1" titulo="Elemento" campo="ELEMENTO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="500" password="" multilinea="0" tipomacro="1" orden="2" ncol="3" primeroenlinea="0" />
+      <campo id="cfd_listacalculos.columnas|tipoelemento" tipo="1" titulo="¬Tipo Elemento" campo="TIPOELEMENTO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="128" password="" multilinea="0" tipomacro="1" orden="3" ncol="3" primeroenlinea="0" />
+      <campo id="cfd_listacalculos.columnas|detalle" tipo="1" titulo="Detalle" campo="DETALLE" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="77" password="" multilinea="0" tipomacro="1" orden="4" ncol="3" primeroenlinea="0" />
+      <campo id="cfd_listacalculos.columnas|tabla" tipo="1" titulo="Tabla" campo="TABLA" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="26" password="" multilinea="0" tipomacro="1" orden="5" ncol="3" primeroenlinea="0" />
+    </bloque>
+  </tab>
+</form>

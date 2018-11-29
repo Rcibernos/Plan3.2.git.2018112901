@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+   <!--<meta http-equiv="cache-control" content="no-cache, no-store, max-age=0, must-revalidate" />-->
+    <!--<meta http-equiv="pragma" content="no-cache" />-->    
+    <title></title>
+    <link rel='stylesheet' href='./Css/default.css'/> 
+</head>
+<body style="width:100%; height:100%; vertical-align :text-top " class="PWFondo">
+<script type="text/javascript" >
+var Url = location.href;  
+UrlPar = Url.replace(/.*\?(.*?)/,"$1");  
+Variables = UrlPar.split ("&");
+NewCss=null;
+if (Variables.length > 0) {
+    for (i = 0; i < Variables.length; i++) {  
+           Separ = Variables[i].split("=");
+           if (Separ[0]=="css" && Separ.length >0 )
+           {NewCss=Separ[1];}
+    }  
+    if (NewCss) 
+    {
+      alert(document.styleSheets);
+      alert(document.styleSheets[0]);
+      alert(document.styleSheets[0].href);
+      document.styleSheets[0].href=NewCss;
+    }
+}
+</script>
+</body>
+</html>
+

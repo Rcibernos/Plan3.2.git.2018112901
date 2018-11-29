@@ -1,0 +1,35 @@
+<form id="dual.catalogos" tablaanexa="DUAL" nbcampoid="DUMMY" nombreexterno="Catalogos" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT Dual.DUMMY&#xD; FROM Dual&#xD; WHERE Dual.DUMMY=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="" version="3">
+  <pa id="dual.catalogos|responsive" padreid="dual.catalogos" nombre="responsive" valor="1" sql="" />
+  <pa id="dual.catalogos|responsivestatus" padreid="dual.catalogos" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="dual.catalogos" id="1967" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="dual.catalogos" id="1968" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1967" visible="1" orden="1">
+      <campo id="dual.catalogos|buscar" tipo="1" titulo="" campo="BUSCAR" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="0" etiqueta="2" longitud="50" password="" multilinea="0" tipomacro="1" orden="1" ncol="4" primeroenlinea="0">
+        <pa padreid="dual.catalogos|buscar" nombre="computed" valor="1" sql="" />
+        <pa padreid="dual.catalogos|buscar" nombre="placeholder" valor="[ Admite patrones de busqueda like (%, [ ] , _ , etc..) ]" sql="" />
+      </campo>
+      <elementodiseno id="2957" titulo="Buscar" catalogelementodiseno="2" ancho="7" alto="18" orden="2" ncol="1" primeroenlinea="0">
+        <pa padreid="2957" nombre="cssclass" valor=" PWButton" />
+      </elementodiseno>
+      <elementodiseno id="2963" titulo="¤685|¬Nuevo catálogo" catalogelementodiseno="2" ancho="7" alto="18" orden="3" ncol="2" primeroenlinea="0">
+        <pa padreid="2963" nombre="cssclass" valor="PWButton" />
+        <calculo padreid="2963" tipo="2" calculo="/*[type=jscript]*/ &#xA;&#xA;$this.PGS(&quot;openForm&quot;,['cfd_tipodatos.ediciondefault', &quot;&quot;, &quot;W&quot;, 1]);" />
+      </elementodiseno>
+      <elementodiseno id="2960" titulo="¤685|¬Nuevo Catalogo sobre tabla existente" catalogelementodiseno="2" ancho="7" alto="18" orden="5" ncol="3" primeroenlinea="0">
+        <pa padreid="2960" nombre="cssclass" valor="PWButton" />
+        <calculo padreid="2960" tipo="2" calculo="/*[type=jscript]*/ &#xA;&#xA;$this.PGS(&quot;openForm&quot;,['CFD_TIPODATOS.Edicion', &quot;&quot;, &quot;W&quot;, 1]);" />
+      </elementodiseno>
+      <bloque catalogformulariodesigner="dual.catalogos" id="1970" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1968" visible="1" orden="6">
+        <campo id="dual.catalogos|fcatalogos" tipo="106" titulo="Catalogos" campo="FCATALOGOS" visible="1" sololectura="8" obligatorio="0" ancho="0" ayuda="" alto="372" etiqueta="2" tabla="CFD_TIPODATOS" formulario_edicion="cfd_tipodatos.edicion" alto_formulario="0" ancho_formulario="0" limite_registros="25" formulario_columnas="cfd_tipodatos.general" con_bajas="0" modo_seleccion="0" contador_de_registros="0" exportar_a_excel="0" nivel_de_agrupacion="0" tamano_de_pagina="" modo_visualizar_formulario_emergente="1" modo_insercion_nuevos_registros="0" expandir_a_lo_alto="0" procedimiento_formulario_asincrono="" paginar_ver_todos="1" validar_grid_encambio_de_pagina="1" condicion="/*[type=SQL]*/&#xA;WHERE CFD_TIPODATOS.Id &gt;= 1000&#xA;AND &#xA;((isnull([@PGS!Buscar] ,'')='') OR&#xA; (CFD_TIPODATOS.NOMBRE like '%' + isnull([@PGS!Buscar] ,'') + '%'&#xA;  OR CFD_TIPODATOS.NBTABLA like  '%' + isnull([@PGS!Buscar] ,'') + '%'&#xA;  OR CFD_TIPODATOS.NBCAMPOID like  '%' + isnull([@PGS!Buscar] ,'') + '%'&#xA;  OR CFD_TIPODATOS.NBCAMPOTITULO like  '%' + isnull([@PGS!Buscar] ,'') + '%'&#xA;  OR CONVERT(VARCHAR(10),CFD_TIPODATOS.ID) = isnull([@PGS!Buscar] ,'')))" orderby="ORDER BY 2" accion_al_editar="" tipomacro="106" orden="1" ncol="12" primeroenlinea="1">
+          <pa padreid="dual.catalogos|fcatalogos" nombre="count_reg_txt" valor="¬Catálogos" sql="" />
+          <pa padreid="dual.catalogos|fcatalogos" nombre="del_reg_tooltip" valor="¬Borrar catálogo" sql="" />
+          <pa padreid="dual.catalogos|fcatalogos" nombre="del_reg_txt_confirm" valor="¬Se va a borrar el catálogo ¿Es esto lo que quiere hacer?" sql="" />
+          <pa padreid="dual.catalogos|fcatalogos" nombre="new_reg_tooltip" valor="¬Nuevo catálogo" sql="" />
+          <pa padreid="dual.catalogos|fcatalogos" nombre="new_reg_txt" valor="¬Nuevo catálogo" sql="" />
+          <pa padreid="dual.catalogos|fcatalogos" nombre="no_filas_txt" valor="¬No hay catálogos definidos para este proyecto" sql="" />
+          <calculo padreid="dual.catalogos|fcatalogos" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/ &#xA;//[@PGS!Buscar]" orden="0" asincrono="1" />
+          <calculo padreid="dual.catalogos|fcatalogos" tipo="102" bdtipo="102" calculo="/*[type=jscript]*/ &#xA;&#xA;var catalogEnUso = $db.executeSql(&quot;SELECT COUNT(tipo) FROM CFD_CAMPO WHERE Tipo = &quot; + $sys.idSelected);&#xA;var catalogConHijos =$db.executeSql(&quot;SELECT COUNT(Padre) FROM CFD_TIPODATOS WHERE Padre = &quot; + $sys.idSelected);&#xA;&#xA;if (catalogEnUso.getValue(0,0) &gt;= 1) {&#xA;    $this.err =&quot;¬El catálogo está en uso&quot;;  &#xA;} else if (catalogConHijos.getValue(0,0) &gt;= 1) {&#xA;    $this.err =&quot;¬El catálogo tiene hijos&quot;; &#xA;}" orden="0" asincrono="1" />
+        </campo>
+      </bloque>
+    </bloque>
+  </tab>
+</form>

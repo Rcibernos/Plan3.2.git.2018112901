@@ -1,0 +1,70 @@
+<form id="wf_ctprocesoboton.general" tablaanexa="WF_CTPROCESOBOTON" nbcampoid="ID" nombreexterno="general" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT WF_CTPROCESOBOTON.iD,&#xD;dbo.PonerPuntuacionNumericaEntera(WF_CTPROCESOBOTON.Id) AS [Id|Id],WF_CTPROCESOBOTON.Seccion AS [Seccion|Seccion],&#xD;dbo.PonerPuntuacionNumericaEntera(WF_CTPROCESOBOTON.Grupo) AS [Grupo|Grupo],dbo.PonerPuntuacionNumericaEntera(WF_CTPROCESOBOTON.Orden) AS [Orden|Orden],&#xD;Tipo_TB.Nombre AS [Tipo|Tipo],Catalogproceso_TB.Nombre AS [Catalogproceso|CatalogProceso],&#xD;replace(replace('[%id%] %TITULO%','%id%',Catalogfase_TB.id),'%TITULO%',Catalogfase_TB.texto) AS [Catalogfase|CatalogFase],&#xD;WF_CTPROCESOBOTON.Msjconfirm AS [Msjconfirm|Msjconfirm],WF_CTPROCESOBOTON.Sqltitulo AS [Sqltitulo|SQLTitulo],&#xD;WF_CTPROCESOBOTON.Sqltooltip AS [Sqltooltip|SQLTooltip],WF_CTPROCESOBOTON.Sqlacceso AS [Sqlacceso|SQLAcceso],&#xD;WF_CTPROCESOBOTON.Sqlaccion AS [Sqlaccion|SQLAccion]&#xD; FROM WF_CTPROCESOBOTON&#xD;LEFT OUTER JOIN WF_VCTTIPOPROCESOBOTON Tipo_TB ON WF_CTPROCESOBOTON.Tipo=Tipo_TB.Id&#xD;LEFT OUTER JOIN WF_CTPROCESO Catalogproceso_TB ON WF_CTPROCESOBOTON.Catalogproceso=Catalogproceso_TB.Id&#xD;LEFT OUTER JOIN WF_CTFASE Catalogfase_TB ON WF_CTPROCESOBOTON.Catalogfase=Catalogfase_TB.Id&#xD; WHERE WF_CTPROCESOBOTON.iD=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="1" condiferencias="0" ncol="" version="3">
+  <pa id="wf_ctprocesoboton.general|responsive" padreid="wf_ctprocesoboton.general" nombre="responsive" valor="1" sql="" />
+  <pa id="wf_ctprocesoboton.general|responsivestatus" padreid="wf_ctprocesoboton.general" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="wf_ctprocesoboton.general" id="2100" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="wf_ctprocesoboton.general" id="2101" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2100" visible="1" orden="1">
+      <bloque catalogformulariodesigner="wf_ctprocesoboton.general" id="2103" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2101" visible="1" orden="1">
+        <campo id="wf_ctprocesoboton.general|id" tipo="2" titulo="Id" campo="ID" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="1" ncol="1" primeroenlinea="1" />
+        <campo id="wf_ctprocesoboton.general|tipo" tipo="1291" titulo="¬Tipo de botón" campo="TIPO" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="2" ncol="3" primeroenlinea="0">
+          <tipocampo id="1291" nombre="*Todos los tipos de boton para proceso" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="WF_VCTTIPOPROCESOBOTON" nbcampoid="ID" nbcampotitulo="WF_VCTTIPOPROCESOBOTON.NOMBRE" sqlinit="/*[type=SQL]*/&#xA;SELECT ID,NOMBRE AS TITULO FROM WF_VCTTIPOPROCESOBOTON ORDER BY ID" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+          <pa id="wf_ctprocesoboton.general|tipo|selector_abierto" padreid="wf_ctprocesoboton.general|tipo" propiedad="selector_abierto" valor="" />
+        </campo>
+        <campo id="wf_ctprocesoboton.general|seccion" tipo="25" titulo="¬Seccion " campo="SECCION" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="25" orden="3" ncol="3" primeroenlinea="0">
+          <pa padreid="wf_ctprocesoboton.general|seccion" nombre="cfcolumn_visible" valor="0" sql="" />
+          <pa padreid="wf_ctprocesoboton.general|seccion" nombre="data_origin" valor="_Apunte.cCatalogProcesoBoton+eBotonSeccion" sql="" />
+        </campo>
+        <campo id="wf_ctprocesoboton.general|grupo" tipo="2" titulo="Grupo" campo="GRUPO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="4" ncol="1" primeroenlinea="0">
+          <pa padreid="wf_ctprocesoboton.general|grupo" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+        <campo id="wf_ctprocesoboton.general|orden" tipo="2" titulo="Orden" campo="ORDEN" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="5" ncol="1" primeroenlinea="0">
+          <pa padreid="wf_ctprocesoboton.general|orden" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="wf_ctprocesoboton.general" id="2104" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2101" visible="1" orden="2">
+        <campo id="wf_ctprocesoboton.general|asincrono" tipo="1005" titulo="¬Asíncrono" campo="ASINCRONO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" tipomacro="-1" orden="1" ncol="1" primeroenlinea="0">
+          <tipocampo id="1005" nombre="*Selector Si/No" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="CATALOGFORMULARIODESIGNERSINO" nbcampoid="ID" nbcampotitulo="CATALOGFORMULARIODESIGNERSINO.DESCRIPCION" sqlinit="SELECT ID AS ID,DESCRIPCION  AS TITULO FROM CatalogFormularioDesignerSiNo" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+          <pa id="wf_ctprocesoboton.general|asincrono|selector_abierto" padreid="wf_ctprocesoboton.general|asincrono" propiedad="selector_abierto" valor="" />
+        </campo>
+        <campo id="wf_ctprocesoboton.general|catalogproceso" tipo="1288" titulo="¬Proceso" campo="CATALOGPROCESO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="Si se omite el botón se mostrará en todos los tipos de proceso" alto="20" etiqueta="2" tipomacro="-1" orden="2" ncol="3" primeroenlinea="1">
+          <tipocampo id="1288" nombre="*Todos los tipos de proceso" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="WF_CTPROCESO" nbcampoid="ID" nbcampotitulo="WF_CTPROCESO.NOMBRE" sqlinit="/*[type=SQL]*/&#xD;&#xA;SELECT ID,NOMBRE AS TITULO FROM WF_CTPROCESO ORDER BY NOMBRE" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+          <pa id="wf_ctprocesoboton.general|catalogproceso|selector_abierto" padreid="wf_ctprocesoboton.general|catalogproceso" propiedad="selector_abierto" valor="" />
+        </campo>
+        <campo id="wf_ctprocesoboton.general|catalogfase" tipo="1289" titulo="¬Fase" campo="CATALOGFASE" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="Si se omite el botón se mostrará en todas las fases del proceso " alto="20" etiqueta="2" tipomacro="-1" orden="3" ncol="3" primeroenlinea="0">
+          <tipocampo id="1289" nombre="*Todas las Fases x Proceso Selceccionado" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="WF_CTFASE" nbcampoid="ID" nbcampotitulo="REPLACE(REPLACE('[%ID%] %TITULO%','%ID%',CAST(WF_CTFASE.ID AS VARCHAR(200))),'%TITULO%',WF_CTFASE.TEXTO)" sqlinit="/*[type=sql]*//*[type=SQL]*/&#xD;&#xA;--Todas las fases x Proceso Seleccionado&#xD;&#xA;SELECT ID,replace(replace('[%id%] %TITULO%','%id%',CAST(WF_CTFASE.id AS VARCHAR(200))),'%TITULO%',WF_CTFASE.texto) AS TITULO &#xD;&#xA;FROM WF_CTFASE &#xD;&#xA;WHERE WF_CTFASE.Catalog_Proceso=[@PGS!CatalogProceso]&#xD;&#xA;ORDER BY WF_CTFASE.Nivel, WF_CTFASE.texto" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+          <pa id="wf_ctprocesoboton.general|catalogfase|selector_abierto" padreid="wf_ctprocesoboton.general|catalogfase" propiedad="selector_abierto" valor="" />
+          <calculo padreid="wf_ctprocesoboton.general|catalogfase" tipo="1" bdtipo="3" calculo="/*[type=jscript]*/ &#xA;/*[@PGS!Catalogproceso]*/" orden="0" asincrono="1" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="wf_ctprocesoboton.general" id="2105" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2101" visible="1" orden="4">
+        <campo id="wf_ctprocesoboton.general|msjconfirm" tipo="1" titulo="¬Mensaje de confirmación para mostrar al usuario antes de ejecutar el botón" campo="MSJCONFIRM" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="51" etiqueta="2" longitud="500" password="" multilinea="1" tipomacro="1" orden="1" ncol="12" primeroenlinea="1">
+          <pa padreid="wf_ctprocesoboton.general|msjconfirm" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="wf_ctprocesoboton.general" id="2106" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2101" visible="1" orden="5">
+        <campo id="wf_ctprocesoboton.general|sqltitulo" tipo="26" titulo="¬Script para definir el título del botón" campo="SQLTITULO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="SELECT &lt;Titulo&gt;" alto="207" etiqueta="2" tipomacro="26" orden="1" ncol="6" primeroenlinea="1">
+          <pa padreid="wf_ctprocesoboton.general|sqltitulo" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+        <campo id="wf_ctprocesoboton.general|sqltooltip" tipo="26" titulo="¬Script para definir el tooltip de ayuda del botón" campo="SQLTOOLTIP" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="SELECT &lt;ToolTip&gt;" alto="207" etiqueta="2" tipomacro="26" orden="2" ncol="6" primeroenlinea="0">
+          <pa padreid="wf_ctprocesoboton.general|sqltooltip" nombre="cfcolumn_order" valor="0" sql="" />
+          <pa padreid="wf_ctprocesoboton.general|sqltooltip" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="wf_ctprocesoboton.general" id="2107" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2101" visible="1" orden="6">
+        <campo id="wf_ctprocesoboton.general|sqlacceso" tipo="26" titulo="¬Script para definir la visibilidad del botón" campo="SQLACCESO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="SELECT &lt;Acceso (1=Si/0=No)&gt;" alto="207" etiqueta="2" tipomacro="26" orden="1" ncol="6" primeroenlinea="1">
+          <pa padreid="wf_ctprocesoboton.general|sqlacceso" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+        <campo id="wf_ctprocesoboton.general|sqlvalid" tipo="26" titulo="¬Script que valida o confirma la acción" campo="SQLVALID" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="210" etiqueta="2" tipomacro="26" orden="2" ncol="6" primeroenlinea="0">
+          <pa padreid="wf_ctprocesoboton.general|sqlvalid" nombre="cfcolumn_visible" valor="0" sql="" />
+          <calculo padreid="wf_ctprocesoboton.general|sqlvalid" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/ &#xA;//[@PGS!TIPO]&#xA;&#xA;if ($F.getValue(&quot;TIPO&quot;) &gt;= 100) {&#xA;    $this.visible = true;&#xA;} else {&#xA;    $this.visible = false;&#xA;}" orden="0" asincrono="1" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="wf_ctprocesoboton.general" id="2249" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2101" visible="1" orden="7">
+        <campo id="wf_ctprocesoboton.general|sqlaccion" tipo="26" titulo="¬(Script) Definir la acción del botón" campo="SQLACCION" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="SELECT &lt;Accion&gt;" alto="207" etiqueta="2" tipomacro="26" orden="1" ncol="12" primeroenlinea="0">
+          <pa padreid="wf_ctprocesoboton.general|sqlaccion" nombre="cfcolumn_visible" valor="1" sql="" />
+          <calculo padreid="wf_ctprocesoboton.general|sqlaccion" tipo="1" bdtipo="3" calculo="/*[type=jscript]*/ &#xA;//[@PGS!TIPO]&#xA;&#xA;if ($F.getValue(&quot;TIPO&quot;) &gt;= 100) {&#xA;    $this.visible = true;&#xA;} else {&#xA;    $this.visible = false;&#xA;}" orden="0" asincrono="1" />
+        </campo>
+      </bloque>
+    </bloque>
+  </tab>
+  <calculo id="wf_ctprocesoboton.general|wf_ctprocesoboton.general|204" padreid="wf_ctprocesoboton.general" tipo="204" calculo="/*[type=jscript]*/ &#xA;&#xA;/* Cálculo guardado en previsión de posible nueva funcionalidad en el motor de plan de un cálculo que sea capaz de parar un insert:&#xA;var Tipo = $F.getValue(&quot;Tipo&quot;);&#xA;var CatalogProceso = (!$F.getValue(&quot;CatalogProceso&quot;)) ? -1 : $F.getValue(&quot;CatalogProceso&quot;);&#xA;var CatalogFase = (!$F.getValue(&quot;CatalogFase&quot;)) ? -1 : $F.getValue(&quot;CatalogFase&quot;);&#xA;&#xA;var DuplicacionRegistro = $db.executeSql(&quot;SELECT count(id) FROM dbo.WF_CTPROCESOBOTON WHERE Tipo = &quot; + Tipo + &quot; AND isnull(CatalogProceso,-1) =&quot; + CatalogProceso + &quot; AND isnull(CatalogFase,-1) =&quot; + CatalogFase);&#xA; &#xA;$sys.trace(Tipo + &quot; &quot; + CatalogProceso + &quot; &quot; + CatalogFase + &quot; &quot; + DuplicacionRegistro.getValue(0,0))&#xA;if (DuplicacionRegistro.getValue(0,0) == 1) {&#xA;    $this.err = &quot;Error. Botón duplicado (Mismo tipo, proceso y fase que uno ya existente)&quot;;&#xA;}&#xA;*/" orden="0" asincrono="1" />
+</form>

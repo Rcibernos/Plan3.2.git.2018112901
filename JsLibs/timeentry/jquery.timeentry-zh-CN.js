@@ -1,0 +1,1 @@
+(function(a){a.timeEntry.regionalOptions["zh-CN"]={show24Hours:false,separator:":",ampmPrefix:"",ampmNames:["AM","PM"],spinnerTexts:["??","??","??","??","??"]};a.timeEntry.setDefaults(a.timeEntry.regionalOptions["zh-CN"])})(jQuery);

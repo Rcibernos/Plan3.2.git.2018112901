@@ -1,0 +1,19 @@
+<form id="repositorio.dsrepositorionuevo" tablaanexa="REPOSITORIO" nbcampoid="ID" nombreexterno="DsRepositorioNuevo" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT REPOSITORIO.Id&#xD; FROM REPOSITORIO&#xD; WHERE REPOSITORIO.Id=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="" version="3">
+  <pa id="repositorio.dsrepositorionuevo|responsive" padreid="repositorio.dsrepositorionuevo" nombre="responsive" valor="1" sql="" />
+  <pa id="repositorio.dsrepositorionuevo|responsivestatus" padreid="repositorio.dsrepositorionuevo" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="repositorio.dsrepositorionuevo" id="1851" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="repositorio.dsrepositorionuevo" id="1852" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1851" visible="1" orden="1">
+      <campo id="repositorio.dsrepositorionuevo|repositoriosnuevos" tipo="106" titulo="¬Apartados" campo="REPOSITORIOSNUEVOS" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="758" etiqueta="2" tabla="REPOSITORIO" formulario_edicion="repositorio.dsgeneral" alto_formulario="0" ancho_formulario="0" limite_registros="25" formulario_columnas="repositorio.dsgeneral" con_bajas="0" modo_seleccion="0" contador_de_registros="0" exportar_a_excel="0" nivel_de_agrupacion="0" tamano_de_pagina="100" modo_visualizar_formulario_emergente="1" modo_insercion_nuevos_registros="0" expandir_a_lo_alto="0" procedimiento_formulario_asincrono="" paginar_ver_todos="1" validar_grid_encambio_de_pagina="1" condicion="/*[type=SQL]*/&#xD;&#xA;WHERE 1 = 1" orderby="ORDER BY REPOSITORIO.Grupo, REPOSITORIO.Orden" accion_al_editar="" tipomacro="106" orden="2" ncol="12" primeroenlinea="1">
+        <pa padreid="repositorio.dsrepositorionuevo|repositoriosnuevos" nombre="count_reg_txt" valor="¬Apartados" sql="" />
+        <pa padreid="repositorio.dsrepositorionuevo|repositoriosnuevos" nombre="del_reg_ok" valor="¬Se ha borrado el apartado" sql="" />
+        <pa padreid="repositorio.dsrepositorionuevo|repositoriosnuevos" nombre="del_reg_tooltip" valor="¬Borrar apartado" sql="" />
+        <pa padreid="repositorio.dsrepositorionuevo|repositoriosnuevos" nombre="del_reg_txt_confirm" valor="¬El apartado se borrará del proyecto. ¿Es esto lo que quiere hacer?" sql="" />
+        <pa padreid="repositorio.dsrepositorionuevo|repositoriosnuevos" nombre="new_reg_tooltip" valor="¬Nuevo apartado" sql="" />
+        <pa padreid="repositorio.dsrepositorionuevo|repositoriosnuevos" nombre="new_reg_txt" valor="¬Nuevo apartado" sql="" />
+        <pa padreid="repositorio.dsrepositorionuevo|repositoriosnuevos" nombre="no_filas_txt" valor="¬No hay apartados que mostrar" sql="" />
+        <pa padreid="repositorio.dsrepositorionuevo|repositoriosnuevos" nombre="use_sqlcamposvista" valor="0" sql="" />
+        <calculo padreid="repositorio.dsrepositorionuevo|repositoriosnuevos" tipo="102" bdtipo="102" calculo="/*[type=jscript]*/ &#xA;//comprobar que el elemento a borrar no tiene hijos (repositorioelemento)&#xA;//Si tiene hijos mostrar mensaje&#xA;var numHijos = $db.executeSql(&quot;SELECT COUNT(id) FROM REPOSITORIOELEMENTO WHERE REPOSITORIO=&quot; + $sys.idSelected);&#xA;&#xA;if (numHijos.getValue(0,0) &gt; 0) {&#xA;    $this.err =(&quot;¬No es posible borrar el repositorio sin borrar antes sus elementos hijos&quot;);&#xA;}" orden="0" asincrono="1" />
+      </campo>
+    </bloque>
+  </tab>
+</form>

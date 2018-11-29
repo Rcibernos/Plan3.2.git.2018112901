@@ -1,0 +1,7 @@
+<catalogpro nombre="scriptsEmpty" tipo="0">function scriptsEmpty(p1) {
+    $sys.trace("p1: " + p1);
+    if (p1 == 1) {
+      $sys.trace("Script vacio");
+      $this.cssClass = "empty";
+    }
+}</catalogpro>

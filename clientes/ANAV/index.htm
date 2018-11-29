@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript" type="javascript">
+    /*function fGo()
+    {
+         
+    }*/
+  </script>
+</head>
+<body>
+  Prueba de carga de Usuarios<br /><br />  
+  (cuidado!! no introducir caracetes &,=,? <br /><br />  
+  <table>
+      <tr>
+        <td>Código de usuario:</td>
+        <td>(El código se obtendra de la autenciación integrada o de la pantalla de login en caso de simulación para las pruebas remotas)</td>        
+      </tr>
+      <tr>
+        <td>nombre</td>
+        <td><input id="nombre" type="text" value="" style="width:500px"/></td>
+      </tr>
+      <tr>
+        <td>apellidos</td>
+        <td><input  id="apellidos" type="text" value="" style="width:500px"/></td>
+      </tr>      
+      <tr>
+        <td>telefono</td>
+        <td><input  id="telefono" type="text" value="" style="width:500px"/></td>
+      </tr>
+      <tr>
+        <td>correo</td>
+        <td><input  id="correo" type="text" value="" style="width:500px"/></td>
+        </tr>
+    <tr>
+        <td>puesto</td>
+        <td><select  id="puesto" style="width:500px">
+         <option value="" > Enviar un nulo </option>
+         <option value="-9999" > Enviar un valor Erroneo </option>
+         <option value="57" > 57=USUARIO</option>
+         <option value="91" > 91=REGISTRO</option>
+         <option value="223" > 223=GDA - ADMINISTRADOR DE LA APLICACION</option>
+         <option value="221" > 221=CCC</option>
+         <option value="224" > 224=GDF - ADMINISTRADOR DE FICHAS DOCUMENTALES</option>
+         <option value="225" > 225=GDP - ADMINISTRADOR DE PLANTILLAS DE FICHAS DOCUMENTALES</option>
+         <option value="226" > 57=GDB - USUARIOS DEL BORRADOR DOCUMENTAL</option>
+        </select></td>
+    </tr>
+        <tr>
+        <td>nivelacs</td>
+        <td><select  id="nivelacs" style="width:500px">
+         <option value="" > Enviar un nulo </option>
+         <option value="-9999" > Enviar un valor Erroneo </option>
+         <option value="0" > 0=Publico</option>
+         <option value="5" > 5=MEDIA</option>
+         <option value="10" > 10=ALTA</option>         
+        </select></td>
+    </tr>
+    <tr>
+        <td>doctec</td>
+        <td><select  id="doctec" style="width:500px">
+         <option value="" > Enviar un nulo </option>
+         <option value="-9999" > Enviar un valor Erroneo </option>
+         <option value="0" > 0=No</option>
+         <option value="1" > 1=Si</option>         
+        </select></td>
+    </tr>
+    <tr>
+        <td>prodactp</td>
+        <td><select  id="prodactp" style="width:500px">
+         <option value="" > Enviar un nulo </option>
+         <option value="-9999" > Enviar un valor Erroneo </option>
+         <option value="0" > 0=No</option>
+         <option value="1" > 1=Si</option>         
+        </select></td>
+    </tr>
+    <tr>
+        <td>firmante</td>
+        <td><select  id="firmante" style="width:500px">
+         <option value="" > Enviar un nulo </option>
+         <option value="-9999" > Enviar un valor Erroneo </option>
+         <option value="0" > 0=No</option>
+         <option value="1" > 1=Si</option>         
+        </select></td>
+    </tr>
+    <tr>
+        <td>configurador</td>
+        <td><select  id="configurador" style="width:500px">
+         <option value="" > Enviar un nulo </option>
+         <option value="-9999" > Enviar un valor Erroneo </option>
+         <option value="0" > 0=No</option>
+         <option value="1" > 1=Si</option>         
+        </select></td>
+    </tr> 
+  </table>
+  <input  id="URL" type="text" value="https://plan.cibernos.com/clientesplan/test/default.aspx?app=anav" style="width:500px"/><input type="button" value="Enviar" onclick="javascript:
+      p_nombre= document.getElementById('nombre').value;
+      p_apellidos= document.getElementById('apellidos').value;
+      p_telefono= document.getElementById('telefono').value;
+      p_correo= document.getElementById('correo').value;
+      p_puesto= document.getElementById('puesto').value;
+      p_nivelacs= document.getElementById('nivelacs').value;
+      p_doctec= document.getElementById('doctec').value;
+      p_prodactp= document.getElementById('prodactp').value;      
+      p_firmante= document.getElementById('firmante').value;
+      p_configurador= document.getElementById('configurador').value;
+      aURL= document.getElementById('URL').value;
+      aURL = aURL + 
+             (p_nombre==''?'':'&nombre=' + p_nombre) +
+             (p_apellidos==''?'':'&apellidos=' + p_apellidos) +
+             (p_telefono==''?'':'&telefono=' + p_telefono) +
+             (p_correo==''?'':'&correo=' + p_correo) +
+             (p_puesto==''?'':'&puesto=' + p_puesto) +
+             (p_nivelacs==''?'':'&nivelacs=' + p_nivelacs) +
+             (p_doctec==''?'':'&doctec=' + p_doctec) +
+             (p_prodactp==''?'':'&prodactp=' + p_prodactp) +
+             (p_firmante==''?'':'&firmante=' + p_firmante) +
+             (p_configurador==''?'':'&configurador=' + p_configurador);  
+       alert(aURL);
+       location.href=aURL;" />
+  
+</body>
+</html>

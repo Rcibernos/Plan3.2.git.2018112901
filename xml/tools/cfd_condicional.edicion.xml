@@ -1,0 +1,13 @@
+<form id="cfd_condicional.edicion" tablaanexa="CFD_CONDICIONAL" nbcampoid="ID" nombreexterno="¬Edición" nbbtablaoriginal="" ayuda="" sqlcamposvista="" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="1" condiferencias="0" ncol="10" dynaform="--Prueba" version="3">
+  <pa id="cfd_condicional.edicion|responsive" padreid="cfd_condicional.edicion" nombre="responsive" valor="1" sql="" />
+  <pa id="cfd_condicional.edicion|responsivestatus" padreid="cfd_condicional.edicion" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="cfd_condicional.edicion" id="2220" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="cfd_condicional.edicion" id="2221" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2220" visible="1" orden="1">
+      <bloque catalogformulariodesigner="cfd_condicional.edicion" id="2222" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2221" visible="1" orden="1">
+        <campo id="cfd_condicional.edicion|id" tipo="2" titulo="¬Id" campo="ID" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" tipomacro="2" orden="1" ncol="3" primeroenlinea="0" />
+        <campo id="cfd_condicional.edicion|catalogformulariodesigner" tipo="1" titulo="¬CatalogFormularioDesigner" campo="CATALOGFORMULARIODESIGNER" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="50" password="" multilinea="0" tipomacro="1" orden="2" ncol="3" primeroenlinea="0" />
+      </bloque>
+      <campo id="cfd_condicional.edicion|dynaform" tipo="26" titulo="Cálculo" campo="DYNAFORM" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="395" etiqueta="2" tipomacro="26" orden="2" ncol="12" primeroenlinea="0" />
+    </bloque>
+  </tab>
+</form>

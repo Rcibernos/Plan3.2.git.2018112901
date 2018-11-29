@@ -1,0 +1,2 @@
+﻿<form OmitirCargaDeDatos="1"  id="STATIC.vacio" tablaanexa="STATIC" nbcampoid="iD" nombreexterno="Vacion" sqlcamposvista="SELECT STATIC.iD FROM STATIC  WHERE STATIC.iD=" selectasterisco="SELECT id FROM STATIC" grupo="a.Formulario " auxy="-99999" auxx="-99999">
+</form>

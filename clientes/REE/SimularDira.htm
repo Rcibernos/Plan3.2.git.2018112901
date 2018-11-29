@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+   <!--<meta http-equiv="cache-control" content="no-cache, no-store, max-age=0, must-revalidate" />-->
+    <!--<meta http-equiv="pragma" content="no-cache" />-->    
+    <title></title>        
+</head>
+<body style="width:100%; height:100%; vertical-align :text-top " class="PWFondo">
+<form  autocomplete="off" id="form1" action="">
+-------------- <br/>
+Indique un usuario <br/>
+nombreUsuario: &nbsp; &nbsp;&nbsp;
+    <input type="text"  id="AUXnombreUsuario"/>  <br/>
+descripcionUsuario:<input type="text"  id="AUXdescripcionUsuario"/>  <br/><br/>
+<hr  style="width:100%"/>
+<input type="button" id="bselect" value="seleccionar usuario" onclick="javascript:seleccionarusuario();" /><br/>
+</form>
+</body>
+<script language="javascript" type ="text/javascript" >
+
+function seleccionarusuario(IdTextBox, IDIframe)
+{
+  alert(document.forms[0].AUXdescripcionUsuario.value);  
+  window.opener.document.forms[0].descripcionUsuario.value = document.forms[0].AUXdescripcionUsuario.value;
+  alert(document.forms[0].AUXnombreUsuario.value);
+  window.opener.document.forms[0].nombreUsuario.value = document.forms[0].AUXnombreUsuario.value;
+  window.close();
+}
+
+</script>
+
+</html>

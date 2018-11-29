@@ -1,0 +1,1 @@
+(function(a){a.timeEntry.regionalOptions.sk={show24Hours:false,separator:":",ampmPrefix:"",ampmNames:["AM","PM"],spinnerTexts:["Teraz","Predchádzajúce pole","Nasledujúce pole","Zvýšit","Znížit"]};a.timeEntry.setDefaults(a.timeEntry.regionalOptions.sk)})(jQuery);

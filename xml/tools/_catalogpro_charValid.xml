@@ -1,0 +1,9 @@
+<catalogpro nombre="charValid" tipo="0">function charValid(nombre) {
+    var caractValid = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_";
+    var name = nombre;
+ 	var i;
+    for (i = 0; i &lt; nombre.length; i++) { 
+        var n = caractValid.indexOf(nombre.charAt(i));
+        if (n == -1) $this.err ="¬El caracter " + nombre.charAt(i) + " es inválido";
+    }           
+}</catalogpro>

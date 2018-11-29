@@ -1,0 +1,63 @@
+<form id="repositorioelemento.dselementos" tablaanexa="REPOSITORIOELEMENTO" nbcampoid="ID" nombreexterno="DsElementos" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT REPOSITORIOELEMENTO.Id,&#xD;REPOSITORIOELEMENTO.Nbtabla AS [Nbtabla|¬Tabla],REPOSITORIOELEMENTO.Nbcampoid AS [Nbcampoid|¬Campo Id],&#xD;REPOSITORIOELEMENTO.Nbcampodescripcion AS [Nbcampodescripcion|¬Campo descripción],&#xD;REPOSITORIOELEMENTO.Nbcampoorden AS [Nbcampoorden|¬Campo orden],REPOSITORIOELEMENTO.Nbcamposuperior AS [Nbcamposuperior|¬Campo superior],&#xD;REPOSITORIOELEMENTO.Formulariocolumnas AS [Formulariocolumnas|FormularioColumnas],&#xD;REPOSITORIOELEMENTO.Sqlfrom AS [Sqlfrom|¬(SQL) FROM],REPOSITORIOELEMENTO.Sqlwhere AS [Sqlwhere|¬(SQL) WHERE],&#xD;REPOSITORIOELEMENTO.Sqlaccesoformulario AS [Sqlaccesoformulario|¬(Script) Acceso al elemento],&#xD;REPOSITORIOELEMENTO.Sqlnbformularioediccion AS [Sqlnbformularioediccion|¬(Script) Definición del formulario de edición],&#xD;dbo.PonerPuntuacionNumericaEntera(REPOSITORIOELEMENTO.Orden) AS [Orden|Orden],'[' + convert(varchar(100),Superior_TB.id) +'] ' + Superior_TB.NbTabla AS [Superior|superior]&#xD; FROM REPOSITORIOELEMENTO&#xD;LEFT OUTER JOIN repositorioelemento Superior_TB ON REPOSITORIOELEMENTO.Superior=Superior_TB.Id&#xD; WHERE REPOSITORIOELEMENTO.Id=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="Repositorio" omitirpadreid="0" condiferencias="0" ncol="" version="3">
+  <pa id="repositorioelemento.dselementos|responsive" padreid="repositorioelemento.dselementos" nombre="responsive" valor="1" sql="" />
+  <pa id="repositorioelemento.dselementos|responsivestatus" padreid="repositorioelemento.dselementos" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="repositorioelemento.dselementos" id="1880" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="repositorioelemento.dselementos" id="1881" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1880" visible="1" orden="1">
+      <bloque catalogformulariodesigner="repositorioelemento.dselementos" id="1896" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="1881" visible="1" orden="1">
+        <campo id="repositorioelemento.dselementos|id" tipo="2" titulo="Id" campo="ID" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" tipomacro="2" orden="1" ncol="1" primeroenlinea="0" />
+        <campo id="repositorioelemento.dselementos|orden" tipo="2" titulo="Orden" campo="ORDEN" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="2" ncol="1" primeroenlinea="1" />
+      </bloque>
+      <bloque catalogformulariodesigner="repositorioelemento.dselementos" id="2288" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="1881" visible="1" orden="2">
+        <campo id="repositorioelemento.dselementos|nbtabla" tipo="1" titulo="¬Tabla" campo="NBTABLA" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="1" ncol="3" primeroenlinea="1">
+          <pa padreid="repositorioelemento.dselementos|nbtabla" nombre="autocomplete" valor="1" sql="" />
+          <pa padreid="repositorioelemento.dselementos|nbtabla" nombre="autocomplete_minlength" valor="2" sql="" />
+          <pa padreid="repositorioelemento.dselementos|nbtabla" nombre="autocomplete_script" valor="" sql="SELECT TABLE_NAME FROM CFD_TABLASYVISTAS &#xA;WHERE LOWER(TABLE_NAME) like LOWER([%pattern%])&#xA;ORDER BY TABLE_NAME" />
+          <calculo padreid="repositorioelemento.dselementos|nbtabla" tipo="1" bdtipo="1" calculo="/*[type=sql]*/&#xD;&#xA;--[@PGS!NBTabla]" orden="0" asincrono="1" />
+        </campo>
+        <campo id="repositorioelemento.dselementos|superior" tipo="1263" titulo="¬Superior" campo="SUPERIOR" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="2" ncol="3" primeroenlinea="0">
+          <tipocampo id="1263" nombre="*Selector repositorioelemento x repositorio" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="P2P_REPOSITORIOELEMENTO" nbcampoid="ID" nbcampotitulo="NOMBRE" sqlinit="/*[type=jscript]*/&#xA;//Selector repositorioelemento x repositorio&#xA;&#xA;var repositorio = $db.executeSql(&quot;SELECT repositorio FROM repositorioelemento WHERE id = &quot; + $sys.idForm).getValue(0,0); &#xA;var MySQL = &quot;&quot;;&#xA;&#xA;$sys.trace('$db.type ' + $db.type);&#xA;if ($db.type == &quot;oracle&quot;) {&#xA;    MySQL =&quot;SELECT ID,'[' || CAST(repositorioelemento.id AS varchar2(100)) || '] ' || repositorioelemento.NbTabla AS TITULO FROM repositorioelemento WHERE repositorio = &quot; + repositorio + &quot; ORDER BY 2&quot;;&#xA;} else if ($db.type == &quot;postgresql&quot;) {&#xA;    MySQL =&quot;SELECT ID,'[' || CAST(repositorioelemento.id AS varchar(100)) || '] ' || repositorioelemento.NbTabla AS TITULO FROM repositorioelemento WHERE repositorio = &quot; + repositorio + &quot; ORDER BY 2&quot;;&#xA;} else {&#xA;    //SQL Server &#xA;    MySQL =&quot;SELECT ID,'[' + CAST(repositorioelemento.id AS varchar(100)) +'] ' + repositorioelemento.NbTabla AS TITULO FROM repositorioelemento WHERE repositorio = &quot; + repositorio + &quot; ORDER BY 2&quot;;&#xA;}&#xA;$sys.trace('MySQL' + MySQL);&#xA;&#xA;$this.datos = $db.executeSql(MySQL);" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+          <pa id="repositorioelemento.dselementos|superior|selector_abierto" padreid="repositorioelemento.dselementos|superior" propiedad="selector_abierto" valor="" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="repositorioelemento.dselementos" id="1882" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1881" visible="1" orden="3">
+        <campo id="repositorioelemento.dselementos|nbcampoid" tipo="1" titulo="¬Campo Id" campo="NBCAMPOID" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="1" ncol="3" primeroenlinea="0">
+          <pa padreid="repositorioelemento.dselementos|nbcampoid" nombre="autocomplete" valor="1" sql="" />
+          <pa padreid="repositorioelemento.dselementos|nbcampoid" nombre="autocomplete_minlength" valor="2" sql="" />
+          <pa padreid="repositorioelemento.dselementos|nbcampoid" nombre="autocomplete_script" valor="" sql="/*2*/&#xA;--[@PGS!NBTabla]&#xA;SELECT TABLECOLUMN_NAME FROM CFD_COLUMNAS WHERE LOWER(TABLE_NAME) = LOWER([@PGS!NBTabla])&#xA;AND ( LOWER(COLUMN_NAME) LIKE LOWER([%pattern%]) OR LOWER(TABLECOLUMN_NAME) LIKE LOWER(([%pattern%])))&#xA;ORDER BY COLUMN_NAME" />
+        </campo>
+        <campo id="repositorioelemento.dselementos|nbcampodescripcion" tipo="1" titulo="¬Campo descripción" campo="NBCAMPODESCRIPCION" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="2" ncol="3" primeroenlinea="0">
+          <pa padreid="repositorioelemento.dselementos|nbcampodescripcion" nombre="autocomplete" valor="1" sql="" />
+          <pa padreid="repositorioelemento.dselementos|nbcampodescripcion" nombre="autocomplete_minlength" valor="2" sql="" />
+          <pa padreid="repositorioelemento.dselementos|nbcampodescripcion" nombre="autocomplete_script" valor="" sql="/*2*/&#xA;--[@PGS!NBTabla]&#xA;SELECT TABLECOLUMN_NAME FROM CFD_COLUMNAS WHERE LOWER(TABLE_NAME) = LOWER([@PGS!NBTabla])&#xA;AND ( LOWER(COLUMN_NAME) LIKE LOWER([%pattern%]) OR LOWER(TABLECOLUMN_NAME) LIKE LOWER(([%pattern%])))&#xA;ORDER BY COLUMN_NAME" />
+        </campo>
+        <campo id="repositorioelemento.dselementos|nbcampoorden" tipo="1" titulo="¬Campo orden" campo="NBCAMPOORDEN" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="3" ncol="3" primeroenlinea="1">
+          <pa padreid="repositorioelemento.dselementos|nbcampoorden" nombre="autocomplete" valor="1" sql="" />
+          <pa padreid="repositorioelemento.dselementos|nbcampoorden" nombre="autocomplete_minlength" valor="2" sql="" />
+          <pa padreid="repositorioelemento.dselementos|nbcampoorden" nombre="autocomplete_script" valor="" sql="/*2*/&#xA;--[@PGS!NBTabla]&#xA;SELECT TABLECOLUMN_NAME FROM CFD_COLUMNAS WHERE LOWER(TABLE_NAME) = LOWER([@PGS!NBTabla])&#xA;AND ( LOWER(COLUMN_NAME) LIKE LOWER([%pattern%]) OR LOWER(TABLECOLUMN_NAME) LIKE LOWER(([%pattern%])))&#xA;ORDER BY COLUMN_NAME" />
+        </campo>
+        <campo id="repositorioelemento.dselementos|nbcamposuperior" tipo="1" titulo="¬Campo superior" campo="NBCAMPOSUPERIOR" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="4" ncol="3" primeroenlinea="0">
+          <pa padreid="repositorioelemento.dselementos|nbcamposuperior" nombre="autocomplete" valor="1" sql="" />
+          <pa padreid="repositorioelemento.dselementos|nbcamposuperior" nombre="autocomplete_minlength" valor="2" sql="" />
+          <pa padreid="repositorioelemento.dselementos|nbcamposuperior" nombre="autocomplete_script" valor="" sql="/*2*/&#xA;--[@PGS!NBTabla]&#xA;SELECT TABLECOLUMN_NAME FROM CFD_COLUMNAS WHERE LOWER(TABLE_NAME) = LOWER([@PGS!NBTabla])&#xA;AND ( LOWER(COLUMN_NAME) LIKE LOWER([%pattern%]) OR LOWER(TABLECOLUMN_NAME) LIKE LOWER(([%pattern%])))&#xA;ORDER BY COLUMN_NAME" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="repositorioelemento.dselementos" id="1884" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1881" visible="1" orden="4">
+        <campo id="repositorioelemento.dselementos|sqlfrom" tipo="26" titulo="¬(SQL) FROM" campo="SQLFROM" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="FROM" alto="250" etiqueta="2" tipomacro="26" orden="1" ncol="6" primeroenlinea="1">
+          <pa padreid="repositorioelemento.dselementos|sqlfrom" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+        <campo id="repositorioelemento.dselementos|sqlwhere" tipo="26" titulo="¬(SQL) WHERE" campo="SQLWHERE" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="WHERE" alto="250" etiqueta="2" tipomacro="26" orden="2" ncol="6" primeroenlinea="0">
+          <pa padreid="repositorioelemento.dselementos|sqlwhere" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="repositorioelemento.dselementos" id="1885" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1881" visible="1" orden="5">
+        <campo id="repositorioelemento.dselementos|sqlaccesoformulario" tipo="26" titulo="¬(Script) Acceso al elemento" campo="SQLACCESOFORMULARIO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="SELECT &lt;Lect (0/1)&gt;,&lt;Edic (1/0)&gt;,&lt;Alta (1/0)&gt;,&lt;Baja (1/0)&gt;" alto="250" etiqueta="2" tipomacro="26" orden="1" ncol="6" primeroenlinea="1">
+          <pa padreid="repositorioelemento.dselementos|sqlaccesoformulario" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+        <campo id="repositorioelemento.dselementos|sqlnbformularioediccion" tipo="26" titulo="¬(Script) Definición del formulario de edición" campo="SQLNBFORMULARIOEDICCION" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="SELECT &lt;Formulario&gt;" alto="250" etiqueta="2" tipomacro="26" orden="2" ncol="6" primeroenlinea="0">
+          <pa padreid="repositorioelemento.dselementos|sqlnbformularioediccion" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+      </bloque>
+    </bloque>
+  </tab>
+  <campo id="repositorioelemento.dselementos|formulariocolumnas" tipo="1" titulo="FormularioColumnas" campo="FORMULARIOCOLUMNAS" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="3" ncol="4" primeroenlinea="0" />
+</form>

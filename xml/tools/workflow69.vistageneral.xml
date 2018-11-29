@@ -1,0 +1,1 @@
+<form id="workflow69.vistageneral" tablaanexa="WF_Proceso_69" nbcampoid="Agenda" nombreexterno="_Vista General" sqlcamposvista="SELECT WF_Proceso_69.Agenda&#xD; FROM WF_Proceso_69&#xD; WHERE WF_Proceso_69.Agenda=" selectasterisco="SELECT Agenda FROM WF_Proceso_69" grupo="a.Formulario " auxy="-99999" auxx="-99999" />

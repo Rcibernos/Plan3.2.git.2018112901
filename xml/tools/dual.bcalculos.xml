@@ -1,0 +1,22 @@
+<form id="dual.bcalculos" tablaanexa="DUAL" nbcampoid="DUMMY" nombreexterno="Buscador de cálculos" nbbtablaoriginal="" ayuda="" sqlcamposvista="" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="1" condiferencias="0" ncol="10" version="3">
+  <pa id="dual.bcalculos|responsive" padreid="dual.bcalculos" nombre="responsive" valor="1" sql="" />
+  <pa id="dual.bcalculos|responsivestatus" padreid="dual.bcalculos" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="dual.bcalculos" id="2202" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="dual.bcalculos" id="2203" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2202" visible="1" orden="1">
+      <bloque catalogformulariodesigner="dual.bcalculos" id="2205" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2203" visible="1" orden="1">
+        <campo id="dual.bcalculos|buscar" tipo="14" titulo="Buscar" campo="BUSCAR" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="225" etiqueta="2" multilinea="1" tipomacro="14" orden="1" ncol="11" primeroenlinea="0">
+          <pa padreid="dual.bcalculos|buscar" nombre="computed" valor="1" sql="" />
+        </campo>
+        <elementodiseno id="2953" titulo="Buscar" catalogelementodiseno="2" ancho="7" alto="18" orden="2" ncol="1" primeroenlinea="0">
+          <pa padreid="2953" nombre="cssclass" valor=" PWButton" />
+        </elementodiseno>
+      </bloque>
+      <bloque catalogformulariodesigner="dual.bcalculos" id="2206" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2203" visible="1" orden="2">
+        <campo id="dual.bcalculos|bcalculos" tipo="106" titulo="¬Cálculos" campo="BCALCULOS" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="440" etiqueta="2" tabla="CFD_LISTACALCULOS" formulario_edicion="cfd_listacalculos.general" alto_formulario="0" ancho_formulario="0" limite_registros="25" formulario_columnas="cfd_listacalculos.columnas" con_bajas="0" modo_seleccion="0" contador_de_registros="1" exportar_a_excel="0" nivel_de_agrupacion="0" tamano_de_pagina="20" modo_visualizar_formulario_emergente="1" modo_insercion_nuevos_registros="0" expandir_a_lo_alto="0" procedimiento_formulario_asincrono="" paginar_ver_todos="1" validar_grid_encambio_de_pagina="1" condicion="WHERE 1 = 1&#xA;and&#xA;replace(replace(REPLACE(REPLACE(REPLACE(cast(isnull(CALCULO_VARCHAR,'') as varchar(max)), CHAR(10), ''),'[','%'),']','%'),' ',''),char(13),'') LIKE '%' + replace(REPLACE(REPLACE(REPLACE(isnull([@PGS!buscar],''), CHAR(13) + CHAR(10), ''),'[','%'),']','%'),' ','') + '%'&#xA;OR &#xA;replace(replace(REPLACE(REPLACE(REPLACE(cast(isnull(CALCULO_TEXT,'') as varchar(max)), CHAR(10), ''),'[','%'),']','%'),' ',''),char(13),'') LIKE '%' + replace(REPLACE(REPLACE(REPLACE(isnull([@PGS!buscar],''), CHAR(13) + CHAR(10), ''),'[','%'),']','%'),' ','') + '%'" orderby="ORDER BY 2" accion_al_editar="" tipomacro="106" orden="1" ncol="12" primeroenlinea="0">
+          <pa padreid="dual.bcalculos|bcalculos" nombre="use_sqlcamposvista" valor="0" sql="" />
+          <calculo padreid="dual.bcalculos|bcalculos" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/ &#xA;&#xA;//[@PGS!buscar]" orden="0" asincrono="1" />
+        </campo>
+      </bloque>
+    </bloque>
+  </tab>
+</form>

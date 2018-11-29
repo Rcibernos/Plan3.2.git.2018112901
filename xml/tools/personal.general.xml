@@ -1,0 +1,20 @@
+<form id="personal.general" tablaanexa="PERSONAL" nbcampoid="DNI" nombreexterno="General " nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT Personal.DNI,&#xD;dbo.PonerPuntuacionNumericaEntera(Personal.Dni) AS [Dni|ID],Personal.Nombre AS [Nombre|Nombre],&#xD;Personal.Apellidos AS [Apellidos|Apellidos],Personal.Movil AS [Movil|Movil],Personal.Email AS [Email|eMail],&#xD;Personal.Telefono AS [Telefono|Telefono]&#xD; FROM Personal&#xD; WHERE Personal.DNI=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="" version="3">
+  <pa id="personal.general|responsive" padreid="personal.general" nombre="responsive" valor="1" sql="" />
+  <pa id="personal.general|responsivestatus" padreid="personal.general" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="personal.general" id="1856" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="personal.general" id="1857" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1856" visible="1" orden="1">
+      <bloque catalogformulariodesigner="personal.general" id="1858" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1857" visible="1" orden="1">
+        <campo id="personal.general|dni" tipo="2" titulo="ID" campo="DNI" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="1" ncol="2" primeroenlinea="1">
+          <calculo padreid="personal.general|dni" tipo="1" bdtipo="1" calculo="IF isnull([@PGS!dni],-1)=-1&#xD;&#xA;SELECT max(dni)+1 FROM personal" orden="100" asincrono="1" />
+        </campo>
+        <campo id="personal.general|nombre" tipo="1" titulo="Nombre" campo="NOMBRE" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="21" etiqueta="2" longitud="30" password="" multilinea="0" tipomacro="1" orden="2" ncol="4" primeroenlinea="0" />
+        <campo id="personal.general|apellidos" tipo="1" titulo="Apellidos" campo="APELLIDOS" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="21" etiqueta="2" longitud="50" password="" multilinea="0" tipomacro="1" orden="3" ncol="6" primeroenlinea="0" />
+      </bloque>
+      <bloque catalogformulariodesigner="personal.general" id="1859" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1857" visible="1" orden="2">
+        <campo id="personal.general|telefono" tipo="1" titulo="Telefono" campo="TELEFONO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="21" etiqueta="2" longitud="15" password="" multilinea="0" tipomacro="1" orden="1" ncol="2" primeroenlinea="1" />
+        <campo id="personal.general|movil" tipo="1" titulo="Movil" campo="MOVIL" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="21" etiqueta="2" longitud="9" password="" multilinea="0" tipomacro="1" orden="2" ncol="2" primeroenlinea="0" />
+        <campo id="personal.general|email" tipo="17" titulo="eMail" campo="EMAIL" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="21" etiqueta="2" tipomacro="17" orden="3" ncol="8" primeroenlinea="0" />
+      </bloque>
+    </bloque>
+  </tab>
+</form>

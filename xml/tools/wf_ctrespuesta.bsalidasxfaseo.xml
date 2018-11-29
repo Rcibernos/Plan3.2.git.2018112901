@@ -1,0 +1,156 @@
+<form id="wf_ctrespuesta.bsalidasxfaseo" tablaanexa="WF_CTRESPUESTA" nbcampoid="ID" nombreexterno="Bsalidasxfaseo" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT WF_CTRESPUESTA.Id,&#xD;WF_CTRESPUESTA.Exestoreprocedure AS [Exestoreprocedure|¬(Script) Acción al avanzar (Se ejecuta despues de avanzar de fase)],&#xD;WF_CTRESPUESTA.Validador AS [Validador|¬(Script) Validador],WF_CTRESPUESTA.Dynadestino AS [Dynadestino|¬(Script) Destino variable],&#xD;dbo.PonerPuntuacionNumericaEntera(WF_CTRESPUESTA.Id) AS [Id|id],WF_CTRESPUESTA.Sqlvisible AS [Sqlvisible|¬(Script) Visiblidad],&#xD;WF_CTRESPUESTA.Modoavance AS [Modoavance|¬Modo avance],WF_CTRESPUESTA.Texto AS [Texto|¬Nombre de la respuesta],&#xD;dbo.PonerPuntuacionNumericaEntera(WF_CTRESPUESTA.Peso) AS [Peso|¬Peso],dbo.PonerPuntuacionNumericaEntera(WF_CTRESPUESTA.Orden) AS [Orden|¬Orden],&#xD;dbo.PonerSiNo(WF_CTRESPUESTA.Catalogformulariodesignerreadonly) AS [Catalogformulariodesignerreadonly|¬Formulario de la fase en solo lectura],&#xD;Catalogformulariodesigner_TB.CATALOGFORMULARIODESIGNER AS [Catalogformulariodesigner|¬Formulario para la respuesta],&#xD;dbo.PonerSiNo(WF_CTRESPUESTA.Catalogformulariodesignerigualfase) AS [Catalogformulariodesignerigualfase|¬Formulario Igual que la fase],&#xD;WF_CTRESPUESTA.Sqlavance AS [Sqlavance|¬Script para evaluar Pesos en avance de fase],&#xD;Catalog_fase_origen_TB.Texto AS [Catalog_fase_origen|¬Fase origen],dbo.PonerSiNo(WF_CTRESPUESTA.Comentario_obligatorio) AS [Comentario_obligatorio|¬Comentario obligatorio],&#xD;dbo.PonerSiNo(WF_CTRESPUESTA.Salirenavancefase) AS [Salirenavancefase|¬Salir al avanzar],&#xD;dbo.PonerSiNo(WF_CTRESPUESTA.Dynaformulariodesignerigualfase) AS [Dynaformulariodesignerigualfase|¬Mismo formulario que la fase],&#xD;Catalog_fase_destino_TB.Texto AS [Catalog_fase_destino|¬Fase destino],dbo.PonerSiNo(WF_CTRESPUESTA.Confirmaravancefase) AS [Confirmaravancefase|¬Confirmar Avance Fase],&#xD;dbo.PonerSiNo(WF_CTRESPUESTA.Omitirvalidacion) AS [Omitirvalidacion|¬Omitir validación del formulario],&#xD;WF_CTRESPUESTA.Dynaformulariodesigner AS [Dynaformulariodesigner|¬(Script) F.Dinám],&#xD;WF_CTRESPUESTA.Msjconfirm AS [Msjconfirm|¬Mensaje de confirmación antes de avanzar],&#xD;WF_CTRESPUESTA.Msjayuda AS [Msjayuda|¬Tooltip de ayuda],WF_CTRESPUESTA.Msjok AS [Msjok|¬Mensaje de confirmación]&#xD; FROM WF_CTRESPUESTA&#xD;LEFT OUTER JOIN CFD_TABLAANEXA Catalogformulariodesigner_TB ON WF_CTRESPUESTA.Catalogformulariodesigner=Catalogformulariodesigner_TB.CATALOGFORMULARIODESIGNER&#xD;LEFT OUTER JOIN WF_CTFASE Catalog_fase_origen_TB ON WF_CTRESPUESTA.Catalog_fase_origen=Catalog_fase_origen_TB.Id&#xD;LEFT OUTER JOIN WF_CTFASE Catalog_fase_destino_TB ON WF_CTRESPUESTA.Catalog_fase_destino=Catalog_fase_destino_TB.Id&#xD; WHERE WF_CTRESPUESTA.Id=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="CATALOG_FASE_ORIGEN" omitirpadreid="1" condiferencias="0" ncol="" version="3">
+  <pa id="wf_ctrespuesta.bsalidasxfaseo|responsive" padreid="wf_ctrespuesta.bsalidasxfaseo" nombre="responsive" valor="1" sql="" />
+  <pa id="wf_ctrespuesta.bsalidasxfaseo|responsivestatus" padreid="wf_ctrespuesta.bsalidasxfaseo" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2152" titulo="¬Respuesta " cssclass="" orden="1">
+    <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2161" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2152" visible="1" orden="1">
+      <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2162" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2161" visible="1" orden="1">
+        <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2163" titulo="" cssclass="" ncol="4" primeroenlinea="1" padre="2162" visible="1" orden="1">
+          <campo id="wf_ctrespuesta.bsalidasxfaseo|id" tipo="2" titulo="id" campo="ID" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="1" ncol="2" primeroenlinea="1" />
+          <campo id="wf_ctrespuesta.bsalidasxfaseo|texto" tipo="1" titulo="¬Nombre de la respuesta" campo="TEXTO" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="100" password="" multilinea="0" tipomacro="1" orden="2" ncol="8" primeroenlinea="0" />
+        </bloque>
+        <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2164" titulo="" cssclass="" ncol="5" primeroenlinea="0" padre="2162" visible="1" orden="2">
+          <campo id="wf_ctrespuesta.bsalidasxfaseo|peso" tipo="2" titulo="¬Peso" campo="PESO" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="1" ncol="4" primeroenlinea="1">
+            <pa padreid="wf_ctrespuesta.bsalidasxfaseo|peso" nombre="cfcolumn_visible" valor="0" sql="" />
+            <calculo padreid="wf_ctrespuesta.bsalidasxfaseo|peso" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/ &#xD;&#xA;/**/&#xD;&#xA;if (! $F.getValue(&quot;peso&quot;)) { $this.value=1;}" orden="0" asincrono="1" />
+          </campo>
+          <campo id="wf_ctrespuesta.bsalidasxfaseo|orden" tipo="2" titulo="¬Orden" campo="ORDEN" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="2" ncol="4" primeroenlinea="0">
+            <pa padreid="wf_ctrespuesta.bsalidasxfaseo|orden" nombre="cfcolumn_visible" valor="0" sql="" />
+            <calculo padreid="wf_ctrespuesta.bsalidasxfaseo|orden" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/ &#xD;&#xA;/**/&#xD;&#xA;if (! $F.getValue(&quot;orden&quot;)) { $this.value=0;}" orden="0" asincrono="1" />
+          </campo>
+        </bloque>
+      </bloque>
+      <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2165" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2161" visible="1" orden="2">
+        <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2166" titulo="" cssclass="" ncol="4" primeroenlinea="1" padre="2165" visible="1" orden="1">
+          <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2167" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2166" visible="1" orden="1">
+            <campo id="wf_ctrespuesta.bsalidasxfaseo|catalog_fase_origen" tipo="1278" titulo="¬Fase origen" campo="CATALOG_FASE_ORIGEN" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="1" ncol="12" primeroenlinea="1">
+              <tipocampo id="1278" nombre="*Todas las Fases para respuesta" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="WF_CTFASE" nbcampoid="ID" nbcampotitulo="WF_CTFASE.TEXTO" sqlinit="/*[type=jscript]*//*[type=SQL]*/&#xA;var texto =&quot;&quot;;&#xA;var FaseDest = $F.getValue(&quot;Catalog_fase_destino&quot;);&#xA;var FaseOr = $F.getValue(&quot;Catalog_fase_origen&quot;);&#xA;if ($db.type == &quot;oracle&quot;) {&#xA;    texto=&quot;'[' || to_char(WF_CTFASE.Id) || '] ' || WF_CTFASE.Texto&quot;&#xA;}&#xA;else if ($db.type == &quot;postgresql&quot;) {&#xA;    texto=&quot;'[' || cast(WF_CTFASE.Id AS varchar(100)) || '] ' || WF_CTFASE.Texto&quot;&#xA;}&#xA;else {&#xA;    texto=&quot;'[' + cast(WF_CTFASE.Id AS varchar(100)) + '] ' + WF_CTFASE.Texto&quot;&#xA;}&#xA;var miSQL =&quot;SELECT id, &quot; + texto + &quot; as TITULO FROM WF_CTFASE WHERE CATALOG_PROCESO IN(SELECT CATALOG_PROCESO FROM WF_CTFASE WHERE id=&quot; + (FaseDest?FaseDest:-99) + &quot; OR id=&quot;+ (FaseOr?FaseOr:-99) +&quot;) ORDER BY WF_CTFASE.nivel, WF_CTFASE.Texto, WF_CTFASE.id&quot;;&#xA;&#xA;$this.datos = $db.executeSql(miSQL);" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+              <pa id="wf_ctrespuesta.bsalidasxfaseo|catalog_fase_origen|selector_abierto" padreid="wf_ctrespuesta.bsalidasxfaseo|catalog_fase_origen" propiedad="selector_abierto" valor="" />
+            </campo>
+          </bloque>
+          <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2168" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2166" visible="1" orden="2">
+            <campo id="wf_ctrespuesta.bsalidasxfaseo|catalog_fase_destino" tipo="1278" titulo="¬Fase destino" campo="CATALOG_FASE_DESTINO" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="1" ncol="12" primeroenlinea="1">
+              <tipocampo id="1278" nombre="*Todas las Fases para respuesta" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="WF_CTFASE" nbcampoid="ID" nbcampotitulo="WF_CTFASE.TEXTO" sqlinit="/*[type=jscript]*//*[type=SQL]*/&#xA;var texto =&quot;&quot;;&#xA;var FaseDest = $F.getValue(&quot;Catalog_fase_destino&quot;);&#xA;var FaseOr = $F.getValue(&quot;Catalog_fase_origen&quot;);&#xA;if ($db.type == &quot;oracle&quot;) {&#xA;    texto=&quot;'[' || to_char(WF_CTFASE.Id) || '] ' || WF_CTFASE.Texto&quot;&#xA;}&#xA;else if ($db.type == &quot;postgresql&quot;) {&#xA;    texto=&quot;'[' || cast(WF_CTFASE.Id AS varchar(100)) || '] ' || WF_CTFASE.Texto&quot;&#xA;}&#xA;else {&#xA;    texto=&quot;'[' + cast(WF_CTFASE.Id AS varchar(100)) + '] ' + WF_CTFASE.Texto&quot;&#xA;}&#xA;var miSQL =&quot;SELECT id, &quot; + texto + &quot; as TITULO FROM WF_CTFASE WHERE CATALOG_PROCESO IN(SELECT CATALOG_PROCESO FROM WF_CTFASE WHERE id=&quot; + (FaseDest?FaseDest:-99) + &quot; OR id=&quot;+ (FaseOr?FaseOr:-99) +&quot;) ORDER BY WF_CTFASE.nivel, WF_CTFASE.Texto, WF_CTFASE.id&quot;;&#xA;&#xA;$this.datos = $db.executeSql(miSQL);" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+              <pa id="wf_ctrespuesta.bsalidasxfaseo|catalog_fase_destino|selector_abierto" padreid="wf_ctrespuesta.bsalidasxfaseo|catalog_fase_destino" propiedad="selector_abierto" valor="" />
+            </campo>
+          </bloque>
+        </bloque>
+        <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2169" titulo="" cssclass="" ncol="5" primeroenlinea="0" padre="2165" visible="1" orden="2">
+          <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2170" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2169" visible="1" orden="1">
+            <campo id="wf_ctrespuesta.bsalidasxfaseo|comentario_obligatorio" tipo="11" titulo="¬Comentario obligatorio" campo="COMENTARIO_OBLIGATORIO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="11" orden="1" ncol="4" primeroenlinea="1">
+              <pa padreid="wf_ctrespuesta.bsalidasxfaseo|comentario_obligatorio" nombre="cfcolumn_visible" valor="0" sql="" />
+            </campo>
+            <campo id="wf_ctrespuesta.bsalidasxfaseo|salirenavancefase" tipo="11" titulo="¬Salir al avanzar" campo="SALIRENAVANCEFASE" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="11" orden="2" ncol="4" primeroenlinea="0">
+              <pa padreid="wf_ctrespuesta.bsalidasxfaseo|salirenavancefase" nombre="cfcolumn_visible" valor="0" sql="" />
+            </campo>
+          </bloque>
+          <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2171" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2169" visible="1" orden="2">
+            <campo id="wf_ctrespuesta.bsalidasxfaseo|confirmaravancefase" tipo="11" titulo="¬Confirmar Avance Fase" campo="CONFIRMARAVANCEFASE" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="11" orden="1" ncol="4" primeroenlinea="1">
+              <pa padreid="wf_ctrespuesta.bsalidasxfaseo|confirmaravancefase" nombre="cfcolumn_visible" valor="0" sql="" />
+            </campo>
+            <campo id="wf_ctrespuesta.bsalidasxfaseo|omitirvalidacion" tipo="11" titulo="¬Omitir validación del formulario" campo="OMITIRVALIDACION" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="11" orden="2" ncol="4" primeroenlinea="0">
+              <pa padreid="wf_ctrespuesta.bsalidasxfaseo|omitirvalidacion" nombre="cfcolumn_visible" valor="0" sql="" />
+            </campo>
+          </bloque>
+        </bloque>
+      </bloque>
+      <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2176" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2161" visible="1" orden="3">
+        <campo id="wf_ctrespuesta.bsalidasxfaseo|catalogformulariodesignerigual" tipo="11" titulo="¬Formulario de respuesta igual que la fase" campo="CATALOGFORMULARIODESIGNERIGUAL" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="11" orden="1" ncol="3" primeroenlinea="1">
+          <pa padreid="wf_ctrespuesta.bsalidasxfaseo|catalogformulariodesignerigual" nombre="cfcolumn_visible" valor="0" sql="" />
+          <calculo padreid="wf_ctrespuesta.bsalidasxfaseo|catalogformulariodesignerigual" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/&#xA;//[@PGS!Catalogformulariodesignerigual]&#xA;if ($this.value==null) { $this.value=1; }" orden="0" asincrono="1" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2177" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2161" visible="1" orden="4">
+        <campo id="wf_ctrespuesta.bsalidasxfaseo|catalogformulariodesigner" tipo="1280" titulo="¬Formulario para la respuesta" campo="CATALOGFORMULARIODESIGNER" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="1" ncol="5" primeroenlinea="0">
+          <tipocampo id="1280" nombre="*Todos los formularios Para respuesta" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="CFD_TABLAANEXA" nbcampoid="CATALOGFORMULARIODESIGNER" nbcampotitulo="CFD_TABLAANEXA.CATALOGFORMULARIODESIGNER" sqlinit="/*[type=jscript]*/&#xD;&#xA;var OR=$F.getValue('Catalog_Fase_Origen');&#xD;&#xA;var des=$F.getValue('Catalog_Fase_Destino');&#xD;&#xA;$sys.trace(OR);&#xD;&#xA;$sys.trace(des);&#xD;&#xA;&#xD;&#xA;var PROC=$sys.db.executeSql('SELECT MAX(CATALOG_PROCESO) FROM WF_CTFASE WHERE catalog_Proceso in ( SELECT catalog_proceso FROM WF_CTFASE  WHERE ID='+(OR?OR:'-1')+ ' OR ID='+(des?des:'-1') +')').getValue(0,0);&#xD;&#xA;$sys.trace(PROC);&#xD;&#xA;&#xD;&#xA;var tab = 'wf_proceso_' + PROC;;&#xD;&#xA;var patt = tab + '.%';&#xD;&#xA;&#xD;&#xA;$this.datos=$sys.db.executeSql(&quot;SELECT catalogformulariodesigner AS ID,catalogformulariodesigner AS TITULO FROM CFD_TABLAANEXA WHERE catalogformulariodesigner LIKE '&quot;+ patt +&quot;' OR TABLAANEXA LIKE '&quot;+ tab +&quot;' OR nbTABLAORIGINAL LIKE '&quot;+ tab +&quot;'&quot;);&#xD;&#xA;" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+          <pa id="wf_ctrespuesta.bsalidasxfaseo|catalogformulariodesigner|selector_abierto" padreid="wf_ctrespuesta.bsalidasxfaseo|catalogformulariodesigner" propiedad="selector_abierto" valor="" />
+          <pa padreid="wf_ctrespuesta.bsalidasxfaseo|catalogformulariodesigner" nombre="cfcolumn_visible" valor="0" sql="" />
+          <calculo padreid="wf_ctrespuesta.bsalidasxfaseo|catalogformulariodesigner" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/&#xA;//[@PGS!Catalogformulariodesignerigual]&#xA;if ($F.getValue('Catalogformulariodesignerigual')==0) {   &#xA;   $this.enabled=true;&#xA;   $this.visible=true;&#xA; }&#xA; else {&#xA;   $this.enabled=false;&#xA;   $this.visible=false;&#xA; }" orden="0" asincrono="1" />
+        </campo>
+        <campo id="wf_ctrespuesta.bsalidasxfaseo|catalogformulariodesignerreado" tipo="11" titulo="¬Formulario de la fase en solo lectura" campo="CATALOGFORMULARIODESIGNERREADO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="11" orden="2" ncol="3" primeroenlinea="0">
+          <pa padreid="wf_ctrespuesta.bsalidasxfaseo|catalogformulariodesignerreado" nombre="cfcolumn_visible" valor="0" sql="" />
+          <calculo padreid="wf_ctrespuesta.bsalidasxfaseo|catalogformulariodesignerreado" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/&#xA;//[@PGS!Catalogformulariodesignerigual]&#xA;if ($F.getValue('Catalogformulariodesignerigual')==0) {   &#xA;   $this.enabled=true;&#xA;   $this.visible=true;&#xA; }&#xA; else {&#xA;   $this.enabled=false;&#xA;   $this.visible=false;&#xA; }" orden="0" asincrono="1" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2172" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2161" visible="1" orden="5">
+        <campo id="wf_ctrespuesta.bsalidasxfaseo|msjconfirm" tipo="1" titulo="¬Mensaje de confirmación antes de avanzar" campo="MSJCONFIRM" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="59" etiqueta="2" longitud="500" password="" multilinea="1" tipomacro="1" orden="1" ncol="12" primeroenlinea="1">
+          <pa padreid="wf_ctrespuesta.bsalidasxfaseo|msjconfirm" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2173" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2161" visible="1" orden="6">
+        <campo id="wf_ctrespuesta.bsalidasxfaseo|msjayuda" tipo="1" titulo="¬Tooltip de ayuda" campo="MSJAYUDA" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="59" etiqueta="2" longitud="500" password="" multilinea="1" tipomacro="1" orden="1" ncol="12" primeroenlinea="1">
+          <pa padreid="wf_ctrespuesta.bsalidasxfaseo|msjayuda" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2174" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2161" visible="1" orden="7">
+        <campo id="wf_ctrespuesta.bsalidasxfaseo|msjok" tipo="1" titulo="¬Mensaje de confirmación" campo="MSJOK" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="59" etiqueta="2" longitud="500" password="" multilinea="1" tipomacro="1" orden="1" ncol="12" primeroenlinea="1">
+          <pa padreid="wf_ctrespuesta.bsalidasxfaseo|msjok" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+      </bloque>
+    </bloque>
+  </tab>
+  <tab catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2154" titulo="¬F.Dinám" cssclass="" orden="2">
+    <calculo padreid="2154" tipo="3" calculo="/*[type=jscript]*/ &#xA;&#xA;&#xD;&#xA;/*[type=jscript]*/&#xD;&#xA;&#xD;&#xA;function scriptsEmpty(p1) {&#xD;&#xA;    $sys.trace(&quot;p1: &quot; + p1);&#xD;&#xA;    if (p1 == 1) {&#xD;&#xA;      $sys.trace(&quot;Script vacio&quot;);&#xD;&#xA;      $this.cssClass = &quot;empty&quot;;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xA;scriptsEmpty(!$F.getValue(&quot;Dynaformulariodesigner&quot;));" />
+    <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2175" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2154" visible="1" orden="1">
+      <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2186" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2175" visible="1" orden="2">
+        <campo id="wf_ctrespuesta.bsalidasxfaseo|dynaformulariodesignerigualfas" tipo="11" titulo="¬Mismo formulario que la fase" campo="DYNAFORMULARIODESIGNERIGUALFAS" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="11" orden="1" ncol="2" primeroenlinea="0">
+          <pa padreid="wf_ctrespuesta.bsalidasxfaseo|dynaformulariodesignerigualfas" nombre="cfcolumn_visible" valor="0" sql="" />
+          <calculo padreid="wf_ctrespuesta.bsalidasxfaseo|dynaformulariodesignerigualfas" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/&#xD;&#xA;//[@PGS!Dynaformulariodesigner]&#xD;&#xA;if ($this.value==null) { $this.value=1; }" orden="0" asincrono="1" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2178" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2175" visible="1" orden="3">
+        <campo id="wf_ctrespuesta.bsalidasxfaseo|dynaformulariodesigner" tipo="26" titulo="¬(Script) F.Dinám" campo="DYNAFORMULARIODESIGNER" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="SELECT &lt;Formulario&gt; , &lt;0=Escr./1=Lect.&gt; , &lt;1=Con Foco&gt;" alto="266" etiqueta="2" tipomacro="26" orden="1" ncol="12" primeroenlinea="1">
+          <pa padreid="wf_ctrespuesta.bsalidasxfaseo|dynaformulariodesigner" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+      </bloque>
+    </bloque>
+  </tab>
+  <tab catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2157" titulo="¬Validador " cssclass="" orden="3">
+    <calculo padreid="2157" tipo="3" calculo="/*[type=jscript]*/ &#xA;&#xA;&#xD;&#xA;/*[type=jscript]*/&#xD;&#xA;&#xD;&#xA;function scriptsEmpty(p1) {&#xD;&#xA;    $sys.trace(&quot;p1: &quot; + p1);&#xD;&#xA;    if (p1 == 1) {&#xD;&#xA;      $sys.trace(&quot;Script vacio&quot;);&#xD;&#xA;      $this.cssClass = &quot;empty&quot;;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xA;scriptsEmpty(!$F.getValue(&quot;Validador&quot;));" />
+    <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2179" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2157" visible="1" orden="1">
+      <campo id="wf_ctrespuesta.bsalidasxfaseo|validador" tipo="26" titulo="¬(Script) Validador" campo="VALIDADOR" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="SELECT &lt;Mensaje de Error&gt;" alto="363" etiqueta="2" tipomacro="26" orden="1" ncol="12" primeroenlinea="1">
+        <pa padreid="wf_ctrespuesta.bsalidasxfaseo|validador" nombre="cfcolumn_visible" valor="0" sql="" />
+      </campo>
+    </bloque>
+  </tab>
+  <tab catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2156" titulo="¬Visibilidad" cssclass="" orden="4">
+    <calculo padreid="2156" tipo="3" calculo="/*[type=jscript]*/ &#xA;&#xA;&#xD;&#xA;/*[type=jscript]*/&#xD;&#xA;&#xD;&#xA;function scriptsEmpty(p1) {&#xD;&#xA;    $sys.trace(&quot;p1: &quot; + p1);&#xD;&#xA;    if (p1 == 1) {&#xD;&#xA;      $sys.trace(&quot;Script vacio&quot;);&#xD;&#xA;      $this.cssClass = &quot;empty&quot;;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xA;scriptsEmpty(!$F.getValue(&quot;Sqlvisible&quot;));" />
+    <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2180" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2156" visible="1" orden="1">
+      <campo id="wf_ctrespuesta.bsalidasxfaseo|sqlvisible" tipo="26" titulo="¬(Script) Visiblidad" campo="SQLVISIBLE" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="SELECT &lt;0=Oculta el Camino&gt;" alto="364" etiqueta="2" tipomacro="26" orden="1" ncol="12" primeroenlinea="1">
+        <pa padreid="wf_ctrespuesta.bsalidasxfaseo|sqlvisible" nombre="cfcolumn_visible" valor="0" sql="" />
+      </campo>
+    </bloque>
+  </tab>
+  <tab catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2155" titulo="¬Dest.Var." cssclass="" orden="5">
+    <calculo padreid="2155" tipo="3" calculo="/*[type=jscript]*/ &#xA;&#xA;&#xD;&#xA;/*[type=jscript]*/&#xD;&#xA;&#xD;&#xA;function scriptsEmpty(p1) {&#xD;&#xA;    $sys.trace(&quot;p1: &quot; + p1);&#xD;&#xA;    if (p1 == 1) {&#xD;&#xA;      $sys.trace(&quot;Script vacio&quot;);&#xD;&#xA;      $this.cssClass = &quot;empty&quot;;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xA;scriptsEmpty(!$F.getValue(&quot;Dynadestino&quot;));" />
+    <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2181" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2155" visible="1" orden="1">
+      <campo id="wf_ctrespuesta.bsalidasxfaseo|dynadestino" tipo="26" titulo="¬(Script) Destino variable" campo="DYNADESTINO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="SELECT &lt;FaseDestino&gt;" alto="346" etiqueta="2" tipomacro="26" orden="1" ncol="12" primeroenlinea="1">
+        <pa padreid="wf_ctrespuesta.bsalidasxfaseo|dynadestino" nombre="cfcolumn_visible" valor="0" sql="" />
+      </campo>
+    </bloque>
+  </tab>
+  <tab catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2153" titulo="¬Acción" cssclass="" orden="6">
+    <calculo padreid="2153" tipo="3" calculo="/*[type=jscript]*/ &#xA;&#xA;&#xD;&#xA;/*[type=jscript]*/&#xD;&#xA;&#xD;&#xA;function scriptsEmpty(p1) {&#xD;&#xA;    $sys.trace(&quot;p1: &quot; + p1);&#xD;&#xA;    if (p1 == 1) {&#xD;&#xA;      $sys.trace(&quot;Script vacio&quot;);&#xD;&#xA;      $this.cssClass = &quot;empty&quot;;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xA;scriptsEmpty(!$F.getValue(&quot;Exestoreprocedure&quot;));" />
+    <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2182" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2153" visible="1" orden="1">
+      <campo id="wf_ctrespuesta.bsalidasxfaseo|exestoreprocedure" tipo="26" titulo="¬(Script) Acción al avanzar (Se ejecuta despues de avanzar de fase)" campo="EXESTOREPROCEDURE" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="Las Acciones devueltas son Interpretadas" alto="311" etiqueta="2" tipomacro="26" orden="1" ncol="12" primeroenlinea="1">
+        <pa padreid="wf_ctrespuesta.bsalidasxfaseo|exestoreprocedure" nombre="cfcolumn_visible" valor="0" sql="" />
+      </campo>
+    </bloque>
+  </tab>
+  <tab catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2158" titulo="¬Modo Avance [ Obsoleto ]" cssclass="" orden="7">
+    <calculo padreid="2158" tipo="3" calculo="/*[type=jscript]*/ &#xA;&#xA;&#xD;&#xA;/*[type=jscript]*/&#xD;&#xA;&#xD;&#xA;function scriptsEmpty(p1) {&#xD;&#xA;    $sys.trace(&quot;p1: &quot; + p1);&#xD;&#xA;    if (p1 == 1) {&#xD;&#xA;      $sys.trace(&quot;Script vacio&quot;);&#xD;&#xA;      $this.cssClass = &quot;empty&quot;;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xA;scriptsEmpty(!$F.getValue(&quot;Sqlavance&quot;));" />
+    <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2183" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2158" visible="1" orden="1">
+      <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2184" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2183" visible="1" orden="1">
+        <campo id="wf_ctrespuesta.bsalidasxfaseo|modoavance" tipo="25" titulo="¬Modo avance" campo="MODOAVANCE" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="25" orden="1" ncol="8" primeroenlinea="1">
+          <pa padreid="wf_ctrespuesta.bsalidasxfaseo|modoavance" nombre="cfcolumn_visible" valor="0" sql="" />
+          <pa padreid="wf_ctrespuesta.bsalidasxfaseo|modoavance" nombre="data_origin" valor="_PWApunte.cCatalogProcesoRespuesta+eModoAvanceRespuesta" sql="" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="wf_ctrespuesta.bsalidasxfaseo" id="2185" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2183" visible="1" orden="2">
+        <campo id="wf_ctrespuesta.bsalidasxfaseo|sqlavance" tipo="26" titulo="¬Script para evaluar Pesos en avance de fase" campo="SQLAVANCE" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="359" etiqueta="2" tipomacro="26" orden="1" ncol="12" primeroenlinea="1">
+          <pa padreid="wf_ctrespuesta.bsalidasxfaseo|sqlavance" nombre="cfcolumn_visible" valor="0" sql="" />
+        </campo>
+      </bloque>
+    </bloque>
+  </tab>
+  <calculo id="wf_ctrespuesta.bsalidasxfaseo|wf_ctrespuesta.bsalidasxfaseo|207" padreid="wf_ctrespuesta.bsalidasxfaseo" tipo="207" calculo="/*[type=jscript]*/&#xA;var pId= $F.parentId;&#xA;var newId=-1;&#xA;$sys.trace(pId);&#xA;if ($db.version==&quot;11&quot;){&#xA;    newId=$db.executeSql(&quot;SELECT WF_CTRESPUESTA_ID_SEQ.NEXTVAL FROM DUAL&quot;).getValue(0,0);&#xA;    $db.executeSql(&quot;INSERT INTO WF_CTRESPUESTA (ID,TEXTO,COMENTARIO_OBLIGATORIO,CATALOG_FASE_ORIGEN,PESO,ORDEN,X,CATALOGFORMULARIODESIGNERIGUAL) VALUES (&quot; + newId +&quot;,'¬Nuevo camino',0,&quot; + pId + &quot;,1,0,0,1)&quot;)&#xA;}&#xA;else {&#xA;    $db.executeSql(&quot;INSERT INTO WF_CTRESPUESTA (TEXTO,COMENTARIO_OBLIGATORIO,CATALOG_FASE_ORIGEN,PESO,ORDEN,X,CATALOGFORMULARIODESIGNERIGUAL) VALUES ('¬Nuevo camino',0,&quot; + pId + &quot;,1,0,0,1)&quot;)&#xA;    newId=$db.executeSql(&quot;SELECT MAX(id) FROM WF_CTRESPUESTA&quot;).getValue(0,0);&#xA;}&#xA;&#xA;$this.newId=newId;" orden="0" asincrono="1" />
+</form>

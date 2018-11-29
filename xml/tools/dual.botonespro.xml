@@ -1,0 +1,15 @@
+<form id="dual.botonespro" tablaanexa="DUAL" nbcampoid="DUMMY" nombreexterno="dual.botonespro" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT DUAL.DUMMY&#xD; FROM DUAL&#xD; WHERE DUAL.DUMMY=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="10" version="3">
+  <pa id="dual.botonespro|responsive" padreid="dual.botonespro" nombre="responsive" valor="1" sql="" />
+  <pa id="dual.botonespro|responsivestatus" padreid="dual.botonespro" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="dual.botonespro" id="2098" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="dual.botonespro" id="2099" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2098" visible="1" orden="1">
+      <campo id="dual.botonespro|botonespro" tipo="106" titulo="¬Botones personalizados  para procesos" campo="BOTONESPRO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="0" etiqueta="2" tabla="WF_CTPROCESOBOTON" formulario_edicion="wf_ctprocesoboton.general" alto_formulario="0" ancho_formulario="0" limite_registros="25" formulario_columnas="wf_ctprocesoboton.general" con_bajas="0" modo_seleccion="0" contador_de_registros="0" exportar_a_excel="0" nivel_de_agrupacion="0" tamano_de_pagina="" modo_visualizar_formulario_emergente="1" modo_insercion_nuevos_registros="0" expandir_a_lo_alto="0" procedimiento_formulario_asincrono="" paginar_ver_todos="1" validar_grid_encambio_de_pagina="1" condicion="/*[type=SQL]*/&#xD;&#xA;WHERE 1=1" orderby="ORDER BY 2" accion_al_editar="" tipomacro="106" orden="1" ncol="12" primeroenlinea="0">
+        <pa padreid="dual.botonespro|botonespro" nombre="del_reg_tooltip" valor="¬Borrar botón personalizado" sql="" />
+        <pa padreid="dual.botonespro|botonespro" nombre="del_reg_txt_confirm" valor="¬Se va a borrar el botón personalizado ¿Es esto lo que quiere hacer?" sql="" />
+        <pa padreid="dual.botonespro|botonespro" nombre="new_reg_tooltip" valor="¬Nuevo botón personalizado¬&amp;" sql="" />
+        <pa padreid="dual.botonespro|botonespro" nombre="new_reg_txt" valor="¬Nuevo botón" sql="" />
+        <pa padreid="dual.botonespro|botonespro" nombre="no_filas_txt" valor="¬No hay botones personalizados" sql="" />
+      </campo>
+    </bloque>
+  </tab>
+</form>

@@ -1,0 +1,81 @@
+<form id="primervistazoatributo.dsgeneral" tablaanexa="PRIMERVISTAZOATRIBUTO" nbcampoid="ID" nombreexterno="DsGeneral" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT PRIMERVISTAZOATRIBUTO.Id,&#xD;Repositorio_TB.Nombre AS [Repositorio|Repositorio],PRIMERVISTAZOATRIBUTO.Nombre AS [Nombre|Nombre],&#xD;PRIMERVISTAZOATRIBUTO.Sql4select AS [Sql4select|Sql4Select],PRIMERVISTAZOATRIBUTO.Sql4count AS [Sql4count|Sql4Count],&#xD;PRIMERVISTAZOATRIBUTO.Sqlcond AS [Sqlcond|SqlCond],PRIMERVISTAZOATRIBUTO.Sqlorden AS [Sqlorden|SqlOrden],&#xD;dbo.PonerPuntuacionNumericaEntera(PRIMERVISTAZOATRIBUTO.Dni) AS [Dni|Dni],Actualizarnumero_TB.DESCRIPCION AS [Actualizarnumero|ActualizarNumero],&#xD;dbo.PonerPuntuacionNumericaEntera(PRIMERVISTAZOATRIBUTO.Orden) AS [Orden|Orden],&#xD;PRIMERVISTAZOATRIBUTO.Sistema AS [Sistema|Sistema],Primervistazocarpeta_TB.Nombre AS [Primervistazocarpeta|PRIMERVISTAZOCARPETA],&#xD;Puesto_TB.Nombre AS [Puesto|Puesto],Catalogformulariodesigner_TB.Nombre AS [Catalogformulariodesigner|CATALOGFORMULARIODESIGNER],&#xD;PRIMERVISTAZOATRIBUTO.Sqlgroup AS [Sqlgroup|SqlGroup],PRIMERVISTAZOATRIBUTO.Sqlfromgroup AS [Sqlfromgroup|SqlFromGroup],&#xD;PRIMERVISTAZOATRIBUTO.Sqlvariables AS [Sqlvariables|SqlVariables],PRIMERVISTAZOATRIBUTO.Sqlsum AS [Sqlsum|SqlSum],&#xD;Ipad_TB.DESCRIPCION AS [Ipad|iPad],dbo.PonerPuntuacionNumericaEntera(PRIMERVISTAZOATRIBUTO.Idmenufacilboton) AS [Idmenufacilboton|IdMenuFacilBoton]&#xD; FROM PRIMERVISTAZOATRIBUTO&#xD;LEFT OUTER JOIN REPOSITORIO Repositorio_TB ON PRIMERVISTAZOATRIBUTO.Repositorio=Repositorio_TB.Id&#xD;LEFT OUTER JOIN CatalogFormularioDesignerSiNo Actualizarnumero_TB ON PRIMERVISTAZOATRIBUTO.Actualizarnumero=Actualizarnumero_TB.ID&#xD;LEFT OUTER JOIN PRIMERVISTAZOCARPETA Primervistazocarpeta_TB ON PRIMERVISTAZOATRIBUTO.Primervistazocarpeta=Primervistazocarpeta_TB.Id&#xD;LEFT OUTER JOIN CATalogpueSTO Puesto_TB ON PRIMERVISTAZOATRIBUTO.Puesto=Puesto_TB.Id&#xD;LEFT OUTER JOIN CATALOGFORMULARIODESIGNER Catalogformulariodesigner_TB ON PRIMERVISTAZOATRIBUTO.Catalogformulariodesigner=Catalogformulariodesigner_TB.NOMBRE&#xD;LEFT OUTER JOIN CatalogFormularioDesignerSiNo Ipad_TB ON PRIMERVISTAZOATRIBUTO.Ipad=Ipad_TB.ID&#xD; WHERE PRIMERVISTAZOATRIBUTO.Id=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="1" condiferencias="0" ncol="" version="3">
+  <pa id="primervistazoatributo.dsgeneral|responsive" padreid="primervistazoatributo.dsgeneral" nombre="responsive" valor="1" sql="" />
+  <pa id="primervistazoatributo.dsgeneral|responsivestatus" padreid="primervistazoatributo.dsgeneral" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="primervistazoatributo.dsgeneral" id="1860" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="primervistazoatributo.dsgeneral" id="1861" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1860" visible="1" orden="1">
+      <bloque catalogformulariodesigner="primervistazoatributo.dsgeneral" id="1862" titulo="" cssclass="" ncol="10" primeroenlinea="1" padre="1861" visible="1" orden="1">
+        <bloque catalogformulariodesigner="primervistazoatributo.dsgeneral" id="1863" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1862" visible="1" orden="1">
+          <campo id="primervistazoatributo.dsgeneral|repositorio" tipo="1258" titulo="Repositorio" campo="REPOSITORIO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="1" ncol="3" primeroenlinea="1">
+            <tipocampo id="1258" nombre="*Selector REPOSITORIO Tipo_2" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="REPOSITORIO" nbcampoid="ID" nbcampotitulo="REPOSITORIO.NOMBRE" sqlinit="/*[type=sql]*/&#xD;&#xA;SELECT ID,NOMBRE AS TITULO &#xD;&#xA;FROM REPOSITORIO &#xD;&#xA;WHERE tipo = 2&#xD;&#xA;ORDER BY NOMBRE" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+            <pa id="primervistazoatributo.dsgeneral|repositorio|selector_abierto" padreid="primervistazoatributo.dsgeneral|repositorio" propiedad="selector_abierto" valor="" />
+          </campo>
+          <campo id="primervistazoatributo.dsgeneral|nombre" tipo="1" titulo="Nombre" campo="NOMBRE" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="50" password="" multilinea="0" tipomacro="1" orden="2" ncol="9" primeroenlinea="0" />
+        </bloque>
+        <bloque catalogformulariodesigner="primervistazoatributo.dsgeneral" id="1864" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1862" visible="1" orden="2">
+          <campo id="primervistazoatributo.dsgeneral|sql4select" tipo="26" titulo="Sql4Select" campo="SQL4SELECT" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="Select" alto="110" etiqueta="2" tipomacro="26" orden="1" ncol="6" primeroenlinea="1">
+            <pa padreid="primervistazoatributo.dsgeneral|sql4select" nombre="load_snippet" valor="usuario" sql="" />
+          </campo>
+          <campo id="primervistazoatributo.dsgeneral|sql4count" tipo="26" titulo="Sql4Count" campo="SQL4COUNT" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="Count" alto="110" etiqueta="2" tipomacro="26" orden="2" ncol="6" primeroenlinea="0">
+            <pa padreid="primervistazoatributo.dsgeneral|sql4count" nombre="load_snippet" valor="usuario" sql="" />
+          </campo>
+        </bloque>
+        <bloque catalogformulariodesigner="primervistazoatributo.dsgeneral" id="1865" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1862" visible="1" orden="3">
+          <campo id="primervistazoatributo.dsgeneral|sqlcond" tipo="26" titulo="SqlCond" campo="SQLCOND" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="Condición" alto="110" etiqueta="2" tipomacro="26" orden="1" ncol="6" primeroenlinea="1">
+            <pa padreid="primervistazoatributo.dsgeneral|sqlcond" nombre="load_snippet" valor="usuario" sql="" />
+          </campo>
+          <campo id="primervistazoatributo.dsgeneral|sqlorden" tipo="26" titulo="SqlOrden" campo="SQLORDEN" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="Order" alto="110" etiqueta="2" tipomacro="26" orden="2" ncol="6" primeroenlinea="0">
+            <pa padreid="primervistazoatributo.dsgeneral|sqlorden" nombre="load_snippet" valor="usuario" sql="" />
+          </campo>
+        </bloque>
+        <bloque catalogformulariodesigner="primervistazoatributo.dsgeneral" id="1866" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1862" visible="1" orden="4">
+          <campo id="primervistazoatributo.dsgeneral|dni" tipo="2" titulo="Dni" campo="DNI" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="1" ncol="2" primeroenlinea="1" />
+          <campo id="primervistazoatributo.dsgeneral|actualizarnumero" tipo="1005" titulo="ActualizarNumero" campo="ACTUALIZARNUMERO" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="2" ncol="2" primeroenlinea="0">
+            <tipocampo id="1005" nombre="*Selector Si/No" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="CATALOGFORMULARIODESIGNERSINO" nbcampoid="ID" nbcampotitulo="CATALOGFORMULARIODESIGNERSINO.DESCRIPCION" sqlinit="SELECT ID AS ID,DESCRIPCION  AS TITULO FROM CatalogFormularioDesignerSiNo" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+            <pa id="primervistazoatributo.dsgeneral|actualizarnumero|selector_abierto" padreid="primervistazoatributo.dsgeneral|actualizarnumero" propiedad="selector_abierto" valor="" />
+          </campo>
+          <campo id="primervistazoatributo.dsgeneral|orden" tipo="2" titulo="Orden" campo="ORDEN" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="3" ncol="2" primeroenlinea="0" />
+          <campo id="primervistazoatributo.dsgeneral|sistema" tipo="25" titulo="Sistema" campo="SISTEMA" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="25" orden="4" ncol="2" primeroenlinea="0">
+            <pa padreid="primervistazoatributo.dsgeneral|sistema" nombre="data_fixed" valor="0|1" sql="" />
+          </campo>
+          <campo id="primervistazoatributo.dsgeneral|primervistazocarpeta" tipo="1259" titulo="PRIMERVISTAZOCARPETA" campo="PRIMERVISTAZOCARPETA" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="5" ncol="4" primeroenlinea="0">
+            <tipocampo id="1259" nombre="*Selector PRIMERVISTAZOCARPETA DNI_NULL" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="PRIMERVISTAZOCARPETA" nbcampoid="ID" nbcampotitulo="PRIMERVISTAZOCARPETA.NOMBRE" sqlinit="/*[type=SQL]*/&#xD;&#xA;SELECT ID,NOMBRE AS TITULO &#xD;&#xA;FROM PRIMERVISTAZOCARPETA&#xD;&#xA;WHERE dni IS NULL &#xD;&#xA;ORDER BY NOMBRE" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+            <pa id="primervistazoatributo.dsgeneral|primervistazocarpeta|selector_abierto" padreid="primervistazoatributo.dsgeneral|primervistazocarpeta" propiedad="selector_abierto" valor="" />
+          </campo>
+        </bloque>
+        <bloque catalogformulariodesigner="primervistazoatributo.dsgeneral" id="1867" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1862" visible="1" orden="5">
+          <campo id="primervistazoatributo.dsgeneral|puesto" tipo="1260" titulo="Puesto" campo="PUESTO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="1" ncol="6" primeroenlinea="1">
+            <tipocampo id="1260" nombre="*Selector CATalogpueSTO" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="CATALOGPUESTO" nbcampoid="ID" nbcampotitulo="CATALOGPUESTO.NOMBRE" sqlinit="/*[type=SQL]*/&#xD;&#xA;SELECT ID,NOMBRE AS TITULO FROM CATalogpueSTO ORDER BY NOMBRE" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+            <pa id="primervistazoatributo.dsgeneral|puesto|selector_abierto" padreid="primervistazoatributo.dsgeneral|puesto" propiedad="selector_abierto" valor="" />
+          </campo>
+          <campo id="primervistazoatributo.dsgeneral|catalogformulariodesigner" tipo="1261" titulo="CATALOGFORMULARIODESIGNER" campo="CATALOGFORMULARIODESIGNER" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="2" ncol="6" primeroenlinea="0">
+            <tipocampo id="1261" nombre="*Selector CATALOGFORMULARIODESIGNER" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="CATALOGFORMULARIODESIGNER" nbcampoid="NOMBRE" nbcampotitulo="CATALOGFORMULARIODESIGNER.NOMBRE" sqlinit="/*[type=SQL]*/&#xD;&#xA;SELECT DISTINCT NOMBRE,NOMBRE AS TITULO &#xD;&#xA;FROM CATALOGFORMULARIODESIGNER &#xD;&#xA;WHERE nombre LIKE 'workflow%' AND nombre LIKE 'WF_Proceso%'&#xD;&#xA;ORDER BY NOMBRE" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+            <pa id="primervistazoatributo.dsgeneral|catalogformulariodesigner|selector_abierto" padreid="primervistazoatributo.dsgeneral|catalogformulariodesigner" propiedad="selector_abierto" valor="" />
+          </campo>
+        </bloque>
+        <bloque catalogformulariodesigner="primervistazoatributo.dsgeneral" id="1868" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1862" visible="1" orden="6">
+          <campo id="primervistazoatributo.dsgeneral|sqlgroup" tipo="26" titulo="SqlGroup" campo="SQLGROUP" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="Group" alto="110" etiqueta="2" tipomacro="26" orden="1" ncol="6" primeroenlinea="1">
+            <pa padreid="primervistazoatributo.dsgeneral|sqlgroup" nombre="load_snippet" valor="usuario" sql="" />
+          </campo>
+          <campo id="primervistazoatributo.dsgeneral|sqlfromgroup" tipo="26" titulo="SqlFromGroup" campo="SQLFROMGROUP" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="From Group" alto="110" etiqueta="2" tipomacro="26" orden="2" ncol="6" primeroenlinea="0">
+            <pa padreid="primervistazoatributo.dsgeneral|sqlfromgroup" nombre="load_snippet" valor="usuario" sql="" />
+          </campo>
+        </bloque>
+        <bloque catalogformulariodesigner="primervistazoatributo.dsgeneral" id="1869" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1862" visible="1" orden="7">
+          <campo id="primervistazoatributo.dsgeneral|sqlvariables" tipo="26" titulo="SqlVariables" campo="SQLVARIABLES" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="Variables" alto="110" etiqueta="2" tipomacro="26" orden="1" ncol="6" primeroenlinea="1">
+            <pa padreid="primervistazoatributo.dsgeneral|sqlvariables" nombre="load_snippet" valor="usuario" sql="" />
+          </campo>
+          <campo id="primervistazoatributo.dsgeneral|sqlsum" tipo="26" titulo="SqlSum" campo="SQLSUM" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="Sum" alto="110" etiqueta="2" tipomacro="26" orden="2" ncol="6" primeroenlinea="0">
+            <pa padreid="primervistazoatributo.dsgeneral|sqlsum" nombre="load_snippet" valor="usuario" sql="" />
+          </campo>
+        </bloque>
+        <bloque catalogformulariodesigner="primervistazoatributo.dsgeneral" id="1870" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1862" visible="1" orden="8">
+          <campo id="primervistazoatributo.dsgeneral|ipad" tipo="1005" titulo="iPad" campo="IPAD" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="1" ncol="2" primeroenlinea="1">
+            <tipocampo id="1005" nombre="*Selector Si/No" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="CATALOGFORMULARIODESIGNERSINO" nbcampoid="ID" nbcampotitulo="CATALOGFORMULARIODESIGNERSINO.DESCRIPCION" sqlinit="SELECT ID AS ID,DESCRIPCION  AS TITULO FROM CatalogFormularioDesignerSiNo" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+            <pa id="primervistazoatributo.dsgeneral|ipad|selector_abierto" padreid="primervistazoatributo.dsgeneral|ipad" propiedad="selector_abierto" valor="" />
+          </campo>
+          <campo id="primervistazoatributo.dsgeneral|idmenufacilboton" tipo="2" titulo="IdMenuFacilBoton" campo="IDMENUFACILBOTON" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="2" ncol="2" primeroenlinea="0" />
+        </bloque>
+      </bloque>
+    </bloque>
+  </tab>
+</form>

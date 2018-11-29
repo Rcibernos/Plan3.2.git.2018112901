@@ -1,0 +1,22 @@
+<form id="catalogicono.listado" tablaanexa="CATALOGICONO" nbcampoid="ID" nombreexterno="Listado" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT CATalogicONO.iD,&#xD;dbo.PonerPuntuacionNumericaEntera(CATalogicONO.Id) AS [Id|Id],dbo.ComprobarSiHayDocumento(CATalogicONO.Nombre) AS [Nombre|Nombre]&#xD; FROM CATalogicONO&#xD; WHERE CATalogicONO.iD=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="" version="3">
+  <pa id="catalogicono.listado|responsive" padreid="catalogicono.listado" nombre="responsive" valor="1" sql="" />
+  <pa id="catalogicono.listado|responsivestatus" padreid="catalogicono.listado" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="catalogicono.listado" id="1953" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="catalogicono.listado" id="1954" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1953" visible="1" orden="1">
+      <bloque catalogformulariodesigner="catalogicono.listado" id="1955" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1954" visible="1" orden="1">
+        <campo id="catalogicono.listado|id" tipo="2" titulo="Id" campo="ID" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="1" ncol="2" primeroenlinea="1" />
+      </bloque>
+      <bloque catalogformulariodesigner="catalogicono.listado" id="1956" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1954" visible="1" orden="2">
+        <campo id="catalogicono.listado|nombre" tipo="16" titulo="Nombre" campo="NOMBRE" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="200" etiqueta="2" tipomacro="16" orden="1" ncol="5" primeroenlinea="1">
+          <pa padreid="catalogicono.listado|nombre" nombre="file_datacolumnname" valor="archivo" sql="" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="catalogicono.listado" id="1957" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1954" visible="1" orden="3">
+        <elementodiseno id="2907" titulo="Icono" catalogelementodiseno="2" ancho="2" alto="13" orden="1" ncol="1" primeroenlinea="1">
+          <pa padreid="2907" nombre="cfcolumn_visible" valor="1" sql="" />
+          <calculo padreid="2907" tipo="3" calculo="/*[type=jscript]*/ &#xA;$this.title=&quot;¤&quot; + $sys.idSelected + &quot;|&quot;;&#xA;/*SELECT 1,'¤' + CONVERT(varchar(20),[%IdElementoSeleccionado%])+'|'*/" />
+        </elementodiseno>
+      </bloque>
+    </bloque>
+  </tab>
+</form>

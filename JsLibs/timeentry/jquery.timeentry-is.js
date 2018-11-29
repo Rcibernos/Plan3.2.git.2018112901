@@ -1,0 +1,1 @@
+(function(a){a.timeEntry.regionalOptions.is={show24Hours:true,separator:":",ampmPrefix:"",ampmNames:["fh","eh"],spinnerTexts:["Núna","Fyrra svæði","Næsta svæði","Hækka","Lækka"]};a.timeEntry.setDefaults(a.timeEntry.regionalOptions.is)})(jQuery);

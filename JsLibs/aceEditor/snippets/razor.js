@@ -1,0 +1,1 @@
+define("ace/snippets/razor",["require","exports","module"],function(c,a,b){a.snippetText="snippet if\n(${1} == ${2}) {\n	${3}\n}";a.scope="razor"});

@@ -1,0 +1,10 @@
+<form id="dual.prueba001" tablaanexa="DUAL" nbcampoid="DUMMY" nombreexterno="prueba001" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT Dual.DUMMY,&#xD;Dual.Borrame1 AS [Borrame1|borrame1],Dual.Borrame2 AS [Borrame2|borrame2]&#xD; FROM Dual&#xD; WHERE Dual.DUMMY=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="" version="3">
+  <pa id="dual.prueba001|responsive" padreid="dual.prueba001" nombre="responsive" valor="1" sql="" />
+  <pa id="dual.prueba001|responsivestatus" padreid="dual.prueba001" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="dual.prueba001" id="2092" titulo="Tab1" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="dual.prueba001" id="2093" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2092" visible="1" orden="1">
+      <campo id="dual.prueba001|borrame1" tipo="1" titulo="borrame1" campo="BORRAME1" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="1" ncol="2" primeroenlinea="1" />
+    </bloque>
+  </tab>
+  <campo id="dual.prueba001|borrame2" tipo="1" titulo="borrame2" campo="BORRAME2" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="0" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="2" ncol="4" primeroenlinea="0" />
+</form>

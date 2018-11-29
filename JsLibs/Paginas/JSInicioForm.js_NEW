@@ -1,0 +1,56 @@
+﻿// Archivo JScript
+
+   function AjustarTamanoComponentes()
+     {        
+       
+        //Calcular el tamaño de la pantalla        
+        W = getWidth();
+        H = getHeight();
+
+        Aux_MyBody=document.getElementById("MyBody");
+        AuxDivCabecera=document.getElementById("DivCabecera");
+        AuxDivFormulario=document.getElementById("DivFormulario"); //DivDeReferencia. El formularioReal se debe colocar sobre el
+        AuxDIVControlFormulario=document.getElementById("DIVControlFormulario");//Control que contiene el formularioReal y sus controles
+       
+        //Espacio disponible para ajustar el formulario
+        DisponibleT=AuxDivCabecera.offsetTop + AuxDivCabecera.offsetHeight;        
+        DisponibleL=0;
+        DisponibleH=H - DisponibleT -20; //El -20 es para dejar espacio a las scrollbars aunque no en todos los navegadores las tienen en cuenta
+        DisponibleW=W-20;                
+
+        //Se expande el control de referencia hasta el espacio disponible                        
+        AuxDivFormulario.top=""+(DisponibleT) + "px";
+        AuxDivFormulario.left=""+(DisponibleL) + "px";
+        Aux_MyBody.style.overflow="hidden";
+        
+        //AuxDivFormulario.width=""+(DisponibleW-20)+"px"; 
+        //AuxDivFormulario.height=""+(DisponibleH-20)+"px";        
+        //alert("W:("+W+","+DisponibleW+","+AuxDIVControlFormulario.offsetWidth+","+AuxDivFormulario.offsetWidth+")");
+        //alert("H:("+H+","+DisponibleH+","+AuxDIVControlFormulario.offsetHeight+","+AuxDivFormulario.offsetHeight+")");        
+        if (AuxDIVControlFormulario)
+        {
+            if (AuxDIVControlFormulario.offsetWidth > DisponibleW) //AuxDivFormulario.offsetWidth
+            {                
+               //AuxDivFormulario.width=""+(AuxDIVControlFormulario.offsetWidth)+"px";
+               Aux_MyBody.style.overflow="auto";
+            }
+            else
+            {
+              AuxDivFormulario.width=""+(DisponibleW)+"px";
+            }
+        
+            if (AuxDIVControlFormulario.offsetHeight > DisponibleH) //
+            { 
+                //AuxDivFormulario.height=""+(AuxDIVControlFormulario.offsetHeight)+"px";
+                Aux_MyBody.style.overflow="auto";
+            }
+            else
+            {
+               AuxDivFormulario.height=""+(DisponibleH-20)+"px";
+            }
+        }        
+        
+        //Calcula la posicionde la ventana modal
+        Centrar_VentanaModal("DivCapaModal");        
+  } 
+

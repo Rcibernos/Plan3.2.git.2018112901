@@ -1,0 +1,11 @@
+<form id="repositorio.dsprimervistazo" tablaanexa="REPOSITORIO" nbcampoid="ID" nombreexterno="DsPrimerVistazo" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT REPOSITORIO.Id&#xD; FROM REPOSITORIO&#xD; WHERE REPOSITORIO.Id=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="" version="3">
+  <pa id="repositorio.dsprimervistazo|responsive" padreid="repositorio.dsprimervistazo" nombre="responsive" valor="1" sql="" />
+  <pa id="repositorio.dsprimervistazo|responsivestatus" padreid="repositorio.dsprimervistazo" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="repositorio.dsprimervistazo" id="1877" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="repositorio.dsprimervistazo" id="1878" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1877" visible="1" orden="1">
+      <bloque catalogformulariodesigner="repositorio.dsprimervistazo" id="1879" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1878" visible="1" orden="1">
+        <campo id="repositorio.dsprimervistazo|dselementosdelrepositorio" tipo="106" titulo="DS Elementos del Repositorio" campo="DSELEMENTOSDELREPOSITORIO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="769" etiqueta="2" tabla="PRIMERVISTAZOATRIBUTO" formulario_edicion="primervistazoatributo.dsgeneral" alto_formulario="0" ancho_formulario="0" limite_registros="25" formulario_columnas="primervistazoatributo.dsgeneral" con_bajas="0" modo_seleccion="0" contador_de_registros="0" exportar_a_excel="0" nivel_de_agrupacion="0" tamano_de_pagina="" modo_visualizar_formulario_emergente="1" modo_insercion_nuevos_registros="0" expandir_a_lo_alto="0" procedimiento_formulario_asincrono="" paginar_ver_todos="1" validar_grid_encambio_de_pagina="1" condicion="/*[type=SQL]*/&#xD;&#xA;WHERE PRIMERVISTAZOATRIBUTO.PadreId=[%IdEnEjecucion%]" orderby="ORDER BY 2" accion_al_editar="" tipomacro="106" orden="1" ncol="12" primeroenlinea="1" />
+      </bloque>
+    </bloque>
+  </tab>
+</form>

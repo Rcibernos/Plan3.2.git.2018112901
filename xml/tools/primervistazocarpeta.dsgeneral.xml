@@ -1,0 +1,30 @@
+<form id="primervistazocarpeta.dsgeneral" tablaanexa="PRIMERVISTAZOCARPETA" nbcampoid="ID" nombreexterno="DsGeneral" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT PRIMERVISTAZOCARPETA.Id,&#xD;PRIMERVISTAZOCARPETA.Nombre AS [Nombre|Nombre],dbo.PonerPuntuacionNumericaEntera(PRIMERVISTAZOCARPETA.Nivel) AS [Nivel|Nivel],&#xD;dbo.PonerPuntuacionNumericaEntera(PRIMERVISTAZOCARPETA.Orden) AS [Orden|Orden],Superior_TB.Nombre AS [Superior|Superior],&#xD;PRIMERVISTAZOCARPETA.Sistema AS [Sistema|Sistema],dbo.PonerPuntuacionNumericaEntera(PRIMERVISTAZOCARPETA.Dni) AS [Dni|Dni],&#xD;dbo.PonerPuntuacionNumericaEntera(PRIMERVISTAZOCARPETA.Busqueda) AS [Busqueda|Busqueda]&#xD; FROM PRIMERVISTAZOCARPETA&#xD;LEFT OUTER JOIN primervistazocarpeta Superior_TB ON PRIMERVISTAZOCARPETA.Superior=Superior_TB.Id&#xD; WHERE PRIMERVISTAZOCARPETA.Id=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="1" condiferencias="0" ncol="" version="3">
+  <pa id="primervistazocarpeta.dsgeneral|responsive" padreid="primervistazocarpeta.dsgeneral" nombre="responsive" valor="1" sql="" />
+  <pa id="primervistazocarpeta.dsgeneral|responsivestatus" padreid="primervistazocarpeta.dsgeneral" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="primervistazocarpeta.dsgeneral" id="1871" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="primervistazocarpeta.dsgeneral" id="1872" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1871" visible="1" orden="1">
+      <bloque catalogformulariodesigner="primervistazocarpeta.dsgeneral" id="1873" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1872" visible="1" orden="1">
+        <bloque catalogformulariodesigner="primervistazocarpeta.dsgeneral" id="1874" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1873" visible="1" orden="1">
+          <campo id="primervistazocarpeta.dsgeneral|nombre" tipo="1" titulo="Nombre" campo="NOMBRE" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="50" password="" multilinea="0" tipomacro="1" orden="1" ncol="8" primeroenlinea="1" />
+          <campo id="primervistazocarpeta.dsgeneral|nivel" tipo="2" titulo="Nivel" campo="NIVEL" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="2" ncol="2" primeroenlinea="0">
+            <calculo padreid="primervistazocarpeta.dsgeneral|nivel" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/&#xD;&#xA;//[@PGS!Superior]&#xD;&#xA;var superior = $F.getValue(&quot;Superior&quot;);&#xD;&#xA;var superiorPadres;&#xD;&#xA;var superiorPadresValor;&#xD;&#xA;&#xD;&#xA;$f.value = Nivel(superior);&#xD;&#xA;&#xD;&#xA;function Nivel(superior) {  &#xD;&#xA;   if(superior == 0 || superior == null){&#xD;&#xA;      return null;&#xD;&#xA;   } else {&#xD;&#xA;      superiorPadres = $db.executeSql(&quot;select superior from PRIMERVISTAZOCARPETA where id = &quot; + superior); &#xD;&#xA;      superiorPadresValor = superiorPadres.getValue(0,0);&#xD;&#xA;      if(superiorPadresValor != null){&#xD;&#xA;          return 1 + Nivel(superiorPadresValor);&#xD;&#xA;      }   &#xD;&#xA;      return null;    &#xD;&#xA;   }&#xD;&#xA;}" orden="0" asincrono="1" />
+          </campo>
+          <campo id="primervistazocarpeta.dsgeneral|orden" tipo="2" titulo="Orden" campo="ORDEN" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="3" ncol="2" primeroenlinea="0" />
+        </bloque>
+        <bloque catalogformulariodesigner="primervistazocarpeta.dsgeneral" id="1875" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1873" visible="1" orden="2">
+          <campo id="primervistazocarpeta.dsgeneral|superior" tipo="1256" titulo="Superior" campo="SUPERIOR" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="1" ncol="4" primeroenlinea="1">
+            <tipocampo id="1256" nombre="*Selector DS PRIMERVISTAZOCARPETA DNI_NULL Id_Filtrado" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="PRIMERVISTAZOCARPETA" nbcampoid="ID" nbcampotitulo="PRIMERVISTAZOCARPETA.NOMBRE" sqlinit="/*[type=SQL]*/&#xD;&#xA;SELECT ID,NOMBRE AS TITULO &#xD;&#xA;FROM primervistazocarpeta &#xD;&#xA;WHERE dni IS NULL AND Id != [@PGS!Sys.IdForm]&#xD;&#xA;ORDER BY NOMBRE" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+            <pa id="primervistazocarpeta.dsgeneral|superior|selector_abierto" padreid="primervistazocarpeta.dsgeneral|superior" propiedad="selector_abierto" valor="" />
+          </campo>
+          <campo id="primervistazocarpeta.dsgeneral|sistema" tipo="25" titulo="Sistema" campo="SISTEMA" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="25" orden="2" ncol="3" primeroenlinea="0">
+            <pa padreid="primervistazocarpeta.dsgeneral|sistema" nombre="data_fixed" valor="0|1" sql="" />
+          </campo>
+          <campo id="primervistazocarpeta.dsgeneral|dni" tipo="2" titulo="Dni" campo="DNI" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="3" ncol="3" primeroenlinea="0" />
+        </bloque>
+        <bloque catalogformulariodesigner="primervistazocarpeta.dsgeneral" id="1876" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1873" visible="1" orden="3">
+          <campo id="primervistazocarpeta.dsgeneral|busqueda" tipo="2" titulo="Busqueda" campo="BUSQUEDA" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="1" ncol="3" primeroenlinea="1" />
+        </bloque>
+      </bloque>
+    </bloque>
+  </tab>
+</form>

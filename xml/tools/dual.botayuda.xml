@@ -1,0 +1,18 @@
+<form id="dual.botayuda" tablaanexa="DUAL" nbcampoid="DUMMY" nombreexterno="¬Documentación de ayuda" nbbtablaoriginal="" ayuda="" sqlcamposvista="" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="10" version="3">
+  <pa id="dual.botayuda|responsive" padreid="dual.botayuda" nombre="responsive" valor="1" sql="" />
+  <pa id="dual.botayuda|responsivestatus" padreid="dual.botayuda" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="dual.botayuda" id="2359" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="dual.botayuda" id="2360" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2359" visible="1" orden="1">
+      <bloque catalogformulariodesigner="dual.botayuda" id="2361" titulo="¬Botones Documentación" cssclass="" ncol="12" primeroenlinea="0" padre="2360" visible="1" orden="1">
+        <elementodiseno id="2994" titulo="¬AyudaWeb" catalogelementodiseno="2" ancho="7" alto="18" orden="1" ncol="2" primeroenlinea="0">
+          <calculo padreid="2994" tipo="2" calculo="/*[type=jscript]*/ &#xA;&#xA;//var url = &quot;./Ayuda/PLAN_DISENADOR_DESDE_WEB.pdf&quot;;&#xA;var url  = &quot;./Ayuda/&quot; + $sys.idForm;&#xA;&#xA;/*$this.PGS(&quot;OpenUrl&quot;,url);*/&#xA;$this.PGS('url',[url, '_tab']);" />
+        </elementodiseno>
+      </bloque>
+      <bloque catalogformulariodesigner="dual.botayuda" id="2366" titulo="¬Botones formularios comunes" cssclass="" ncol="12" primeroenlinea="0" padre="2360" visible="1" orden="2">
+        <elementodiseno id="2997" titulo="¬FormComunes" catalogelementodiseno="2" ancho="7" alto="18" orden="0" ncol="2" primeroenlinea="0">
+          <calculo padreid="2997" tipo="2" calculo="/*[type=jscript]*/ &#xA;&#xA;var formulario = $sys.idForm;&#xA;&#xA;$this.PGS('url',[&quot;./WFdisform.aspx?nbform=&quot; + formulario.replace(&quot;.&quot;,'%2e').replace('_','%5f'), '_tab']);" />
+        </elementodiseno>
+      </bloque>
+    </bloque>
+  </tab>
+</form>

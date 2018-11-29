@@ -1,0 +1,14 @@
+<form id="panelcontrol.nuevoform" tablaanexa="PANELCONTROL" nbcampoid="ID" nombreexterno="panelcontrol.nuevoform" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT PANELCONTROL.ID&#xD; FROM PANELCONTROL&#xD; WHERE PANELCONTROL.ID=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="10" version="3">
+  <pa id="panelcontrol.nuevoform|responsive" padreid="panelcontrol.nuevoform" nombre="responsive" valor="1" sql="" />
+  <pa id="panelcontrol.nuevoform|responsivestatus" padreid="panelcontrol.nuevoform" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="panelcontrol.nuevoform" id="2094" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="panelcontrol.nuevoform" id="2095" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2094" visible="1" orden="1">
+      <elementodiseno id="2941" titulo="Nuevo Texto" catalogelementodiseno="5" ancho="7" alto="53" orden="0" ncol="4" primeroenlinea="0" />
+      <campo id="panelcontrol.nuevoform|numeroentero" tipo="2" titulo="Numeroentero" campo="NUMEROENTERO" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="0" etiqueta="1" tipomacro="2" orden="1" ncol="3" primeroenlinea="0" />
+      <campo id="panelcontrol.nuevoform|id" tipo="2" titulo="Identificador" campo="ID" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="0" etiqueta="1" tipomacro="2" orden="1" ncol="3" primeroenlinea="0" />
+      <campo id="panelcontrol.nuevoform|numerodecimal" tipo="3" titulo="Numerodecimal" campo="NUMERODECIMAL" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="24" etiqueta="2" decimales="3" tipomacro="3" orden="3" ncol="3" primeroenlinea="0" />
+      <campo id="panelcontrol.nuevoform|personal" tipo="106" titulo="Personal" campo="PERSONAL" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="399" etiqueta="2" tabla="PERSONAL" formulario_edicion="personal.general" alto_formulario="" ancho_formulario="" limite_registros="25" condicion="WHERE Personal.PADREID=[%IdEnEjecucion%]" orderby="ORDER BY 2" tipomacro="106" orden="4" ncol="3" primeroenlinea="0" />
+      <campo id="panelcontrol.nuevoform|nuevoform" tipo="106" titulo="Nuevo Formulario" campo="NUEVOFORM" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="297" etiqueta="2" tabla="PANELCONTROL_NUEVOFORM" formulario_edicion="panelcontrol_nuevoform.general" alto_formulario="" ancho_formulario="" limite_registros="25" condicion="WHERE PANELCONTROL_NUEVOFORM.PADREID=[%IdEnEjecucion%]" orderby="ORDER BY 2" tipomacro="106" orden="5" ncol="3" primeroenlinea="0" />
+    </bloque>
+  </tab>
+</form>

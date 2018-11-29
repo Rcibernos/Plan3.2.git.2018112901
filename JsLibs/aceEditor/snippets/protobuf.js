@@ -1,0 +1,1 @@
+define("ace/snippets/protobuf",["require","exports","module"],function(c,a,b){a.snippetText="";a.scope="protobuf"});

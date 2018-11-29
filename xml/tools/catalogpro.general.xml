@@ -1,0 +1,15 @@
+<form id="catalogpro.general" tablaanexa="CATALOGPRO" nbcampoid="NOMBRE" nombreexterno="General" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT CATALOGPRO.nombre,&#xD;CATALOGPRO.Nombre AS [Nombre|¬Nombre],CATALOGPRO.Value AS [Value|¬Script]&#xD; FROM CATALOGPRO&#xD; WHERE CATALOGPRO.nombre=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="1" condiferencias="0" ncol="" version="3" dynavalidador="/*[type=jscript]*/ &#xA;&#xA;var n =$F.getValue(&quot;nombre&quot;);&#xA;n= n.split(&quot;'&quot;).join(&quot;''&quot;);&#xA;var count= $db.executeSql(&quot;SELECT COUNT(*) FROM CATALOGPRO WHERE LOWER(NOMBRE) ='&quot; + n + &quot;'&quot;);&#xA;&#xA;if (count.getValue(0,0) &gt; 1)&#xA;{      &#xA;   $this.err =&quot;¬El Script ya existe&quot;&#xA;}">
+  <calculo id="catalogpro.general|catalogpro.general|203" padreid="catalogpro.general" tipo="203" calculo="/*[type=jscript]*/ &#xA;&#xA;var n =$F.getValue(&quot;nombre&quot;);&#xA;n= n.split(&quot;'&quot;).join(&quot;''&quot;);&#xA;var count= $db.executeSql(&quot;SELECT COUNT(*) FROM CATALOGPRO WHERE LOWER(NOMBRE) ='&quot; + n + &quot;'&quot;);&#xA;&#xA;if (count.getValue(0,0) &gt; 1)&#xA;{      &#xA;   $this.err =&quot;¬El Script ya existe&quot;&#xA;}" />
+  <pa id="catalogpro.general|responsive" padreid="catalogpro.general" nombre="responsive" valor="1" sql="" />
+  <pa id="catalogpro.general|responsivestatus" padreid="catalogpro.general" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="catalogpro.general" id="1960" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="catalogpro.general" id="1961" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1960" visible="1" orden="1">
+      <campo id="catalogpro.general|nombre" tipo="1" titulo="¬Nombre" campo="NOMBRE" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="1" ncol="4" primeroenlinea="1" />
+      <campo id="catalogpro.general|tipo" tipo="1367" titulo="¬Tipo" campo="TIPO" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" tipomacro="-1" orden="2" ncol="1" primeroenlinea="0">
+        <tipocampo id="1367" nombre="*Selector Tipo_Script" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="combo" vinculada="0" nbtabla="CATTIPO_SCRIPT" nbcampoid="CATTIPO_SCRIPT.ID" nbcampotitulo="CATTIPO_SCRIPT.NOMBRE" sqlinit="SELECT Id, Nombre AS TITULO FROM CatTipo_Script" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="1" campoid="" campotitulo="" />
+        <pa id="catalogpro.general|tipo|selector_abierto" padreid="catalogpro.general|tipo" propiedad="selector_abierto" valor="" />
+      </campo>
+      <campo id="catalogpro.general|value" tipo="26" titulo="¬Script" campo="VALUE" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="455" etiqueta="2" tipomacro="26" orden="3" ncol="12" primeroenlinea="0" />
+    </bloque>
+  </tab>
+</form>

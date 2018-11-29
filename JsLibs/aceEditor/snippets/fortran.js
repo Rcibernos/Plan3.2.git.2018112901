@@ -1,0 +1,1 @@
+define("ace/snippets/fortran",["require","exports","module"],function(c,a,b){a.snippetText=undefined;a.scope="fortran"});

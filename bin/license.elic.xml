@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<License
+Key="MJahw5NmrMG/mQEADdRJHXk6tc5MqoXRxxbjpgdvU9AaudHAc0nIaavocaICKh+Ju0tHodP
+AY4OKaJklIwGaohMI1lKf/cxkRV1yBUu0rxtXMAIzaIuRj5MHXy/ZG4wEFbSatrWhyQsh/Zylb4P
+DIkthJQybKMZh3ljJs5r1kcHXH4/Hrvp3u11DsUrztokvsaVN9iOzKemKkzgnDsrdGWi5JEJKGCc
+LdPVfIslgGX7EnUtOKFTHq6Yqt9yOvfGNlAmBq4RC7zk60KBWpUHfSHVytkUs+Y1gEUo1D0wa+ke
+NifX8fwlwZaxD9k8+CE2PNIgVtlgNAl2J5i+jxx3k5GIwXM3rQxh6VrG6WlSpNQjaDPPml+AzJP4
+H8+zBg4DMadF2Q8EaeNA1U6QGax7i7LYb8Q7tbgAhSI/Vma6s1twlVD5CjdubU+tuuM+/LgrDzD7
++UzTJSeipKSMIzzVfCsXa290uNCl7C+07zh77WTU30pDbPiZ16ZpLR1LW8dxsY4RHtdLelPgNiWX
+hoyMaoFGgL9mKBPamR2irQlDeVBB2dePWJvrTDjci/m/EW8YXVyq3E2k87OHPcAskFFPi5Mw34e2
+Uq4wYD0Vyb1sps0kLLzy9SEJVkVBXKOR4gijj3IVgkmpv5lgFJIS+IfuD0+aEE7RzZ0w2s3HPUqo
+avTAi60MZOHi6yk8PyoV+kxtJbQjtQXUyRAG2kRvVCo5EjZ08tgh0dCKX34LEtGB86oC9GMiBtaf
+5raqccPRA+syv2hNeKYzqAtwiYp7ei0stDJ8ubcG3bB2W4cKR1rsm0lBxzovcfjizFWcL1MkoshV
+ik1pHQFayl8JVVGOpdGXmxmupMwsAqHLHUfsYshHh5sDi6AIQ10UE96Dqph61fNGqkdF/u194FUq
+KQI/rb05ShpTykgHv6mHdJrZ/xCwxb/uxs5HgKsY1nPS+PlBeEemopMJg6PVfkGRMz/G0fM8UweH
+WmM2jEmcRg3f1U10In98K8oeX5Rpp+TgNIhAUvfCmx3478Ym4j9CdAeZ7GifbBYE2RSE2QPPDaKd
+Nnm3Is7msaKUURTrKeIwNSghj6jUFWE0GJTdCY/yxSlf0nahmpyIO7OzSUEKPuODqHJhYPgRFe1x
+cwYBHZ+2dAGk0R3CDD2cIklO/+8zgwTKuwao9lyDJUKlz6G9EEfdzPGa5HsRHkOtjdHlHFPIa+Fx
+H4CTQ4xUV+tzQr9fEjIMPH+822goQ7YvYucfJFqfclurbAyDxSEQxqt72GXxnfgAS8kHgPgwOTJW
+kjbKEJIzpJyxJbGU6HwqTrv55Epwj884MGHS2PuNL5sRKJ9X5ZxOS+GXY39hBzacpPpWMRI7bkrM
+U8ccy5/ObaYvBgmyPvEqc9vwJciOYXOqe5ehCoJptqPGEbBTlQWK9uwcxC/qI9gdmorMuo6LD7GU
+KsnQazljnZ/Y7exn1Pr3FqSuJS+EoLrcFvH3LxpxzhWpKXWGKgQyCpylirjxdm/qWTZzvYs0YUEw
+=" Version="1.3">
+    <Type>Runtime</Type>
+    <Username>CIBERNOS S.A.</Username>
+    <Email>compras@cibernos.com</Email>
+    <Organization>CIBERNOS S.A.</Organization>
+    <LicensedDate>2014-11-12T12:00:00Z</LicensedDate>
+    <ExpiredDate>2015-11-12T12:00:00Z</ExpiredDate>
+    <Products>
+        <Product>
+            <Name>Spire.Doc Pro Edition</Name>
+            <Version>5.2</Version>
+            <Subscription>
+                <NumberOfPermittedDeveloper>1</NumberOfPermittedDeveloper>
+                <NumberOfPermittedSite>2147483647</NumberOfPermittedSite>
+            </Subscription>
+        </Product>
+    </Products>
+    <Issuer>
+        <Name>e-iceblue</Name>
+        <Email>sales@e-iceblue.com</Email>
+        <Url>http://www.e-iceblue.com</Url>
+    </Issuer>
+</License>

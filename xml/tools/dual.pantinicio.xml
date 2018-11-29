@@ -1,0 +1,19 @@
+<form id="dual.pantinicio" tablaanexa="DUAL" nbcampoid="DUMMY" nombreexterno="¬pantInicio" nbbtablaoriginal="" ayuda="" sqlcamposvista="" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="10" version="3">
+  <pa id="dual.pantinicio|responsive" padreid="dual.pantinicio" nombre="responsive" valor="1" sql="" />
+  <pa id="dual.pantinicio|responsivestatus" padreid="dual.pantinicio" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="dual.pantinicio" id="2330" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="dual.pantinicio" id="2331" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2330" visible="1" orden="1">
+      <campo id="dual.pantinicio|pantallainicio" tipo="106" titulo="¬Puestos" campo="PANTALLAINICIO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" tabla="CATALOGPUESTO" formulario_edicion="catalogpuesto.general" alto_formulario="0" ancho_formulario="0" limite_registros="25" formulario_columnas="catalogpuesto.general" con_bajas="0" modo_seleccion="0" contador_de_registros="0" exportar_a_excel="0" nivel_de_agrupacion="0" tamano_de_pagina="0" modo_visualizar_formulario_emergente="1" modo_insercion_nuevos_registros="0" expandir_a_lo_alto="0" procedimiento_formulario_asincrono="" paginar_ver_todos="1" validar_grid_encambio_de_pagina="1" condicion="WHERE 1 = 1" orderby="ORDER BY 2" accion_al_editar="" tipomacro="106" orden="1" ncol="10" primeroenlinea="0">
+        <pa padreid="dual.pantinicio|pantallainicio" nombre="count_reg_txt" valor="¬Puestos" sql="" />
+        <pa padreid="dual.pantinicio|pantallainicio" nombre="del_reg_ok" valor="¬Se ha borrado el puesto" sql="" />
+        <pa padreid="dual.pantinicio|pantallainicio" nombre="del_reg_tooltip" valor="¬Borrar puesto" sql="" />
+        <pa padreid="dual.pantinicio|pantallainicio" nombre="del_reg_txt_confirm" valor="¬El puesto se borrará del proyecto. ¿Esta seguro?" sql="" />
+        <pa padreid="dual.pantinicio|pantallainicio" nombre="new_reg_tooltip" valor="¬Nuevo puesto" sql="" />
+        <pa padreid="dual.pantinicio|pantallainicio" nombre="new_reg_txt" valor="¬Nuevo puesto" sql="" />
+        <pa padreid="dual.pantinicio|pantallainicio" nombre="no_filas_txt" valor="¬No hay puestos que mostrar" sql="" />
+        <pa padreid="dual.pantinicio|pantallainicio" nombre="use_sqlcamposvista" valor="0" sql="" />
+        <calculo padreid="dual.pantinicio|pantallainicio" tipo="102" bdtipo="102" calculo="/*[type=jscript]*/ &#xA;&#xA;/*El cálculo entrará en caso de abrirse el registro en forma modal. Ahora está en tipo Grid*/&#xA;&#xA;var count = $db.executeSql(&quot;select count(*) from contrato where Puesto = &quot; + $sys.idSelected).getValue(0,0);&#xA;&#xA;if (count &gt; 0) {&#xA;    $this.err = &quot;No es posible borrar. Todavía hay usuarios asociados a este puesto&quot;;&#xA;    $this.alertLevel = 0;&#xA;}" orden="0" asincrono="1" />
+      </campo>
+    </bloque>
+  </tab>
+</form>

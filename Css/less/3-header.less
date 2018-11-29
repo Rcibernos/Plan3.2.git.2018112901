@@ -1,0 +1,226 @@
+/* LESS Document */
+
+@import "1-variables.less";
+
+/*LOGO*/
+
+#BarraPrincipal_logo{
+	width: 90px;
+	height: 80px;
+	display: block;
+	float: none;
+	position: absolute;
+		top: 0px;
+		left: @margen;
+	box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.7);
+		-webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.7);
+		-moz-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.7);
+	z-index: 50000;
+
+	background: url(@{imgpath}/logo-plan.png) no-repeat center center @highlight;
+
+}
+
+#bloque_primeraBarra {
+ padding-left:@margenlogo;
+}
+
+#segundaBarra, #terceraBarra, #cuartaBarra{
+	padding-left: @margenbig;
+	padding-right: @margenbig;
+	min-height: @margenbig;
+}
+
+#segundaBarra{
+	z-index: -1500;
+	top: @megamargen;
+	background: @colorcorp;
+	p{
+		color: @graylight;
+		margin-top: @margenmini;
+		margin-bottom: @margenmini;
+		margin-left: 105px;
+	}
+}
+
+#terceraBarra{
+    /* z-index: 1000; */
+	/* top:@megamargen + @margenbig; */
+}
+
+#cuartaBarra{
+    /*z-index: 500;*/
+	top: 110px;
+	background-color: @highlight;
+}
+
+.itemMenuPlan{
+	li{
+		a{
+			padding-top: 7px;
+			padding-bottom: 7px;
+		}
+	}
+	
+}
+
+/*MENU PRINCIPAL*/
+
+ul#BarraPrincipal_menuPrincipal{
+		padding-left: 120px;
+}
+
+
+#BarraPrincipal_avisos{
+		background: url(@{imgpath}/notificaciones-16.png) no-repeat 5px center @graydark;
+		padding-left: 10px;
+		height: @margenbig;
+		width: 55px;
+		margin-top: @margensmall;
+		border-radius: @margenmini;
+			&:hover{
+				background: url(@{imgpath}/notificaciones-hover-16.png) no-repeat @margenmini center @graydarksoft;
+			}
+		a{padding: 6px @margenmini 6px 0; text-align: right; color: @graymedium;
+			&:hover{
+				color: @highlight;
+			}
+		}
+}
+
+#menuGral{
+	background: url(@{imgpath}/menu-20.png) no-repeat @margenmini center @graydark;
+	height: @margenbig;
+	width: @margenbig;
+	border-radius: @margenmini;
+	margin: @margensmall @margenmini 0 @margenmini;
+		&:hover{
+				background: url(@{imgpath}/menu-hover-20.png) no-repeat @margenmini center @graydarksoft;
+			}
+}
+
+#buscador.form-control{
+	background: url(@{imgpath}/buscador-20.png) no-repeat 135px center @graydark;
+	color: @graydarksoft;
+	border: none;
+	width: 165px;
+	height: @margenbig;
+	margin: 2px 3px 0 0;
+		&:focus{ background: url(@{imgpath}/buscador-focus-20.png) no-repeat 135px center @graydarksoft;
+			color: red;
+			box-shadow: none;
+		}
+}
+
+
+
+/*MENU GUARDAR*/ 
+
+
+.btn-plan{
+	border-color: none;
+	height: 28px;
+	width: 28px;
+	margin-top: @margenmini / 3;
+		margin-bottom: @margenmini / 3;
+	box-sizing: border-box;
+	 	-webkit-box-sizing: border-box;
+	 	-moz-box-sizing: border-box;
+	transition: background 0.6s ease-in;
+		-webkit-transition: background 0.6s ease-out;
+		-moz-transition: background 0.6s ease-out;
+		-o-transition: background 0.6s ease-out;
+		&:hover{
+			transition: background 0.6s ease-in;
+			-webkit-transition: background 0.6s ease-out;
+			-moz-transition: background 0.6s ease-out;
+			-o-transition: background 0.6s ease-out;}
+}
+
+div#botonesMenu{ 
+	#guardar{
+		 background: url(@{imgpath}/guardar-16.png) no-repeat center center;
+		 	&:hover{background: url(@{imgpath}/guardar-hover-20.png) no-repeat center center;}
+	 }
+	#guardarSalir{
+		background: url(@{imgpath}/guardar-salir-16.png) no-repeat center center;
+			&:hover{background: url(@{imgpath}/guardar-salir-hover-20.png) no-repeat center center;}
+	}
+	#suprimir{
+		background: url(@{imgpath}/suprimir-16.png) no-repeat center center;
+			&:hover{background: url(@{imgpath}/suprimir-hover-20.png) no-repeat center center;}
+	}
+	#refrescar{
+		background: url(@{imgpath}/images/refresh-16.png) no-repeat center center;
+			&:hover{background: url(@{imgpath}/refresh-hover-20.png) no-repeat center center;}
+	}
+	#imprimir{
+		background: url(@{imgpath}/print-16.png) no-repeat center center;
+			&:hover{background:url(@{imgpath}/print-hover-20.png) no-repeat center center;}
+	}
+	#nuevaVentana{
+		background: url(@{imgpath}/nueva-ventana-16.png) no-repeat center center;
+			&:hover{background: url(@{imgpath}/nueva-ventana-hover-20.png) no-repeat center center;}
+	}
+	#cerrar{
+		background: url(@{imgpath}/salir-16.png) no-repeat center center;
+			&:hover{background: url(@{imgpath}/salir-hover-20.png) no-repeat center center;}
+	}
+}
+
+/*TERCER MENÚ*/ 
+
+#menu_proceso_secciones{
+	padding-left: @megamargen * 2;
+}
+
+.btn-menu{
+	width: @margenbig;
+	height: @margenbig;
+	padding: 7px;
+	margin-top: 3px;
+	background-color: none;
+	cursor: pointer;
+}
+
+#btn_bifurcaciones{	
+	background:url(@{imgpath}/procesos-16.png) no-repeat center center;
+		&:hover{
+			background: url(@{imgpath}/procesos-hover-16.png) no-repeat center center @highlight;
+		}
+}
+
+/*Los estilos deben ser genericos El icono se mete por código. No podemos meter dos imagenes para cada icóno */
+
+.btn-menu{
+	opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+	&:hover{	
+	 opacity: 1;
+     filter: alpha(opacity=100); /* For IE8 and earlier */
+	}
+}
+.btn-menu-ico{
+	/*background:url(@{imgpath}/home.png) no-repeat center center;*/
+	margin: 10px 10px 0 10px;	
+	&:hover{
+	/*background:url(@{imgpath}/home-hover.png) no-repeat center center;*/	 
+	}
+}
+
+.btn-menu-icotexto{
+	/*background:url(@{imgpath}/home.png) no-repeat center center;*/
+	margin: 10px 10px 0 10px;	
+	color:#fff;
+	&:hover{
+	/*background:url(@{imgpath}/home-hover.png) no-repeat center center;*/	 
+	color:#fff;
+	}
+}
+
+.btn-menu-texto{	
+    color:#fff;
+	&:hover{	
+	color:#fff;
+	}
+}

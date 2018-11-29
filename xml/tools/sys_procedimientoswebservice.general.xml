@@ -1,0 +1,23 @@
+<form id="sys_procedimientoswebservice.general" tablaanexa="SYS_PROCEDIMIENTOSWEBSERVICE" nbcampoid="ID" nombreexterno="¬General" nbbtablaoriginal="" ayuda="" sqlcamposvista="" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="1" condiferencias="0" ncol="6" version="3">
+  <pa id="sys_procedimientoswebservice.general|responsive" padreid="sys_procedimientoswebservice.general" nombre="responsive" valor="1" sql="" />
+  <pa id="sys_procedimientoswebservice.general|responsivestatus" padreid="sys_procedimientoswebservice.general" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="sys_procedimientoswebservice.general" id="2373" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="sys_procedimientoswebservice.general" id="2374" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2373" visible="1" orden="1">
+      <bloque catalogformulariodesigner="sys_procedimientoswebservice.general" id="2393" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2374" visible="1" orden="1">
+        <campo id="sys_procedimientoswebservice.general|id" tipo="2" titulo="Id" campo="ID" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" tipomacro="2" orden="1" ncol="2" primeroenlinea="0" />
+        <campo id="sys_procedimientoswebservice.general|alias" tipo="1" titulo="¬Alias" campo="ALIAS" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="2" ncol="10" primeroenlinea="0" />
+      </bloque>
+      <bloque catalogformulariodesigner="sys_procedimientoswebservice.general" id="2394" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="2374" visible="1" orden="3">
+        <campo id="sys_procedimientoswebservice.general|nombre" tipo="1" titulo="¬Nombre" campo="NOMBRE" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="1" ncol="12" primeroenlinea="0">
+          <pa padreid="sys_procedimientoswebservice.general|nombre" nombre="autocomplete" valor="0" sql="" />
+          <pa padreid="sys_procedimientoswebservice.general|nombre" nombre="autocomplete_script" valor="" sql="/*[type=sql]*/&#xA;&#xA;/*&#xA;--Pte. creación de vistas para poder hacerse el predictivo multiBBDD (Éste predictivo tan solo valdría para SQL Server): &#xA;select nombre from catalogpro where nombre like [%pattern%]&#xA;UNION&#xA;SELECT name from sys.objects where type = 'p' and name like [%pattern%]  &#xA;UNION&#xA;SELECT name from sys.objects where type = 'FN' and name like [%pattern%];&#xA;&#xA;--En cualquier caso el predictivo por el momento no puede hacerse en función del campo Tipo (Éste es de tipo lista y al cambiarse el valor en ejecución, el valor del campo sigue sin cambiarse) &#xA;*/&#xA;&#xA;/*&#xA;Este Script, no funciona en modo JavaScript&#xA;*/" />
+        </campo>
+        <campo id="sys_procedimientoswebservice.general|tipo" tipo="25" titulo="¬Tipo" campo="TIPO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" tipomacro="25" orden="2" ncol="12" primeroenlinea="0">
+          <pa padreid="sys_procedimientoswebservice.general|tipo" nombre="data_fixed" valor="0~Procedimiento Almacenado de BD|1~Función de BD|2~Plan.Script" sql="" />
+        </campo>
+      </bloque>
+    </bloque>
+  </tab>
+  <calculo id="sys_procedimientoswebservice.general|sys_procedimientoswebservice.general|204" padreid="sys_procedimientoswebservice.general" tipo="204" calculo="/*[type=jscript]*/&#xA;&#xA;/*&#xA;var alias = $F.getValue('alias');&#xA;var contador = $db.count('SYS_PROCEDIMIENTOSWEBSERVICE', 'alias', 'Where Alias = \'' + alias + '\''); &#xA;$sys.trace('Alias: ' + alias + '; Contador: ' + contador);&#xA;&#xA;if (contador == 1) {&#xA;    $this.alertLevel = 0;&#xA;    $this.err = 'El campo Alias debe ser único';    &#xA;}&#xA;*/" orden="0" asincrono="1" />
+  <calculo id="sys_procedimientoswebservice.general|sys_procedimientoswebservice.general|205" padreid="sys_procedimientoswebservice.general" tipo="205" calculo="/*[type=jscript]*/&#xA;&#xA;/*&#xA;var alias = $F.getValue('alias');&#xA;var contador = $db.count('SYS_PROCEDIMIENTOSWEBSERVICE', 'alias', 'Where Alias = \'' + alias + '\''); &#xA;$sys.trace('Alias: ' + alias + '; Contador: ' + contador);&#xA;&#xA;if (contador == 1) {&#xA;    $this.alertLevel = 0;&#xA;    $this.err = 'El campo Alias debe ser único';    &#xA;}&#xA;*/" orden="0" asincrono="1" />
+</form>

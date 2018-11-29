@@ -1,0 +1,1 @@
+function AjustarTamano(){W=getWidth();H=getHeight();A=document.getElementById("ButtonRet");if(A){A.click()}};

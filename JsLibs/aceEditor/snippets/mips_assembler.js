@@ -1,0 +1,1 @@
+define("ace/snippets/mips_assembler",["require","exports","module"],function(c,a,b){a.snippetText=undefined;a.scope="mips_assembler"});

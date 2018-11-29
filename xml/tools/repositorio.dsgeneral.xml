@@ -1,0 +1,66 @@
+<form id="repositorio.dsgeneral" tablaanexa="REPOSITORIO" nbcampoid="ID" nombreexterno="DsGeneral" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT REPOSITORIO.Id,&#xD;REPOSITORIO.Tipo AS [Tipo|¬Tipo de apartado],REPOSITORIO.Nombre AS [Nombre|¬Nombre],&#xD;dbo.PonerPuntuacionNumericaEntera(REPOSITORIO.Orden) AS [Orden|¬Orden],dbo.PonerPuntuacionNumericaEntera(REPOSITORIO.Nivel2expand) AS [Nivel2expand|¬Nivel al que expandir],&#xD;REPOSITORIO.Modo AS [Modo|¬Modo presentación],dbo.PonerPuntuacionNumericaEntera(REPOSITORIO.Grupo) AS [Grupo|¬Grupo],&#xD;REPOSITORIO.Sqlacceso AS [Sqlacceso|¬Acceso al apartado],REPOSITORIO.Sqltitulo AS [Sqltitulo|¬Script para nombre, tooltip y descripción del apartado],&#xD;Padreid_TB.Nombre AS [Padreid|¬Apartado superior],REPOSITORIO.Sqlnbformulario AS [Sqlnbformulario|¬Definición del formulario o informe],&#xD;REPOSITORIO.Sqlidformulario AS [Sqlidformulario|¬Definición del Id del formulario]&#xD; FROM REPOSITORIO&#xD;LEFT OUTER JOIN repositorio Padreid_TB ON REPOSITORIO.Padreid=Padreid_TB.Id&#xD; WHERE REPOSITORIO.Id=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="10" version="3">
+  <pa id="repositorio.dsgeneral|responsive" padreid="repositorio.dsgeneral" nombre="responsive" valor="1" sql="" />
+  <pa id="repositorio.dsgeneral|responsivestatus" padreid="repositorio.dsgeneral" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="repositorio.dsgeneral" id="1843" titulo="Apartado" cssclass="" orden="2">
+    <bloque catalogformulariodesigner="repositorio.dsgeneral" id="1845" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="1843" visible="1" orden="1">
+      <bloque catalogformulariodesigner="repositorio.dsgeneral" id="1889" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="1845" visible="1" orden="1">
+        <campo id="repositorio.dsgeneral|id" tipo="2" titulo="Id" campo="ID" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" tipomacro="2" orden="1" ncol="1" primeroenlinea="0" />
+        <campo id="repositorio.dsgeneral|nombre" tipo="1" titulo="¬Nombre" campo="NOMBRE" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="2" ncol="3" primeroenlinea="0" />
+        <campo id="repositorio.dsgeneral|tipo" tipo="25" titulo="¬Tipo de apartado" campo="TIPO" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="25" orden="3" ncol="3" primeroenlinea="1">
+          <pa padreid="repositorio.dsgeneral|tipo" nombre="data_origin" valor="cRepositorio.eTipo" sql="" />
+        </campo>
+        <campo id="repositorio.dsgeneral|padreid" tipo="1262" titulo="¬Apartado superior" campo="PADREID" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="4" ncol="3" primeroenlinea="0">
+          <tipocampo id="1262" nombre="*Selector repositorio" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="REPOSITORIO" nbcampoid="ID" nbcampotitulo="REPOSITORIO.NOMBRE" sqlinit="SELECT ID,NOMBRE AS TITULO FROM repositorio ORDER BY NOMBRE" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+          <pa id="repositorio.dsgeneral|padreid|selector_abierto" padreid="repositorio.dsgeneral|padreid" propiedad="selector_abierto" valor="" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="repositorio.dsgeneral" id="2284" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="1845" visible="1" orden="2">
+        <campo id="repositorio.dsgeneral|modo" tipo="25" titulo="¬Modo de Presentación" campo="MODO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="25" orden="1" ncol="3" primeroenlinea="0">
+          <pa padreid="repositorio.dsgeneral|modo" nombre="data_fixed" valor="0~MenuPorDefecto|1~Exposicion" sql="" />
+        </campo>
+        <campo id="repositorio.dsgeneral|grupo" tipo="2" titulo="¬Grupo" campo="GRUPO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="2" ncol="1" primeroenlinea="0" />
+        <campo id="repositorio.dsgeneral|orden" tipo="2" titulo="¬Orden" campo="ORDEN" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="3" ncol="1" primeroenlinea="0" />
+        <campo id="repositorio.dsgeneral|nivel2expand" tipo="2" titulo="¬Nivel de expansión" campo="NIVEL2EXPAND" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="4" ncol="2" primeroenlinea="0">
+          <pa padreid="repositorio.dsgeneral|nivel2expand" nombre="cfcolumn_visible" valor="0" sql="" />
+          <calculo padreid="repositorio.dsgeneral|nivel2expand" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/&#xA;//[@PGS!Tipo]&#xA;var tipoR=$F.getValue(&quot;tipo&quot;);&#xA;$sys.trace(tipoR);&#xA;if (tipoR==1) {$this.visible=true; $this.enabled=true;}&#xA;else {$this.visible=false; $this.enabled=false;}" orden="0" asincrono="1" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="repositorio.dsgeneral" id="1847" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1845" visible="1" orden="3">
+        <campo id="repositorio.dsgeneral|sqlacceso" tipo="26" titulo="¬Acceso al apartado" campo="SQLACCESO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="SELECT &lt;1=Si/0=No&gt;,&lt;0=Lect./1=Escr./2=Escr. sin boton&gt;" alto="150" etiqueta="2" tipomacro="26" orden="1" ncol="12" primeroenlinea="1">
+          <pa padreid="repositorio.dsgeneral|sqlacceso" nombre="load_snippet" valor="usuario" sql="" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="repositorio.dsgeneral" id="1848" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1845" visible="1" orden="4">
+        <campo id="repositorio.dsgeneral|sqltitulo" tipo="26" titulo="¬Script para nombre, tooltip y descripción del apartado" campo="SQLTITULO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="SELECT &lt;Titulo&gt;" alto="155" etiqueta="2" tipomacro="26" orden="1" ncol="12" primeroenlinea="1">
+          <pa padreid="repositorio.dsgeneral|sqltitulo" nombre="load_snippet" valor="usuario" sql="" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="repositorio.dsgeneral" id="1890" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="1845" visible="1" orden="5">
+        <campo id="repositorio.dsgeneral|sqlnbformulario" tipo="26" titulo="¬Definición del formulario o informe" campo="SQLNBFORMULARIO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="SELECT &lt;Formulario&gt;" alto="174" etiqueta="2" tipomacro="26" orden="1" ncol="6" primeroenlinea="0">
+          <pa padreid="repositorio.dsgeneral|sqlnbformulario" nombre="cfcolumn_visible" valor="0" sql="" />
+          <calculo padreid="repositorio.dsgeneral|sqlnbformulario" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/ &#xA;//[@PGS!Tipo]&#xA;var tipoR=$F.getValue(&quot;tipo&quot;);&#xA;if (tipoR==3 || tipoR==9 || tipoR==10 || tipoR==11 || tipoR==8 ) {$this.visible=true; $this.enabled=true; }&#xA;else {$this.visible=false; $this.enabled=false; }" orden="0" asincrono="1" />
+        </campo>
+        <campo id="repositorio.dsgeneral|sqlidformulario" tipo="26" titulo="¬Definición del Id del formulario" campo="SQLIDFORMULARIO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="SELECT &lt;Id Formulario&gt;" alto="179" etiqueta="2" tipomacro="26" orden="2" ncol="6" primeroenlinea="0">
+          <pa padreid="repositorio.dsgeneral|sqlidformulario" nombre="cfcolumn_visible" valor="0" sql="" />
+          <calculo padreid="repositorio.dsgeneral|sqlidformulario" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/ &#xA;//[@PGS!Tipo]&#xA;var tipoR=$F.getValue(&quot;tipo&quot;);&#xA;if (tipoR==3 || tipoR==8) {$this.visible=true; $this.enabled=true; }&#xA;else {$this.visible=false; $this.enabled=false; }" orden="0" asincrono="1" />
+        </campo>
+      </bloque>
+    </bloque>
+  </tab>
+  <tab catalogformulariodesigner="repositorio.dsgeneral" id="1844" titulo="¬Elementos del árbol" cssclass="" orden="3">
+    <bloque catalogformulariodesigner="repositorio.dsgeneral" id="1849" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="1844" visible="1" orden="1">
+      <bloque catalogformulariodesigner="repositorio.dsgeneral" id="1850" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1849" visible="1" orden="1">
+        <campo id="repositorio.dsgeneral|repositorioselementos" tipo="106" titulo="¬Elementos " campo="REPOSITORIOSELEMENTOS" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="510" etiqueta="2" tabla="REPOSITORIOELEMENTO" formulario_edicion="repositorioelemento.dselementos" alto_formulario="0" ancho_formulario="0" limite_registros="25" formulario_columnas="repositorioelemento.dselementos" con_bajas="0" modo_seleccion="0" contador_de_registros="0" exportar_a_excel="0" nivel_de_agrupacion="0" tamano_de_pagina="100" modo_visualizar_formulario_emergente="1" modo_insercion_nuevos_registros="0" expandir_a_lo_alto="0" procedimiento_formulario_asincrono="" paginar_ver_todos="1" validar_grid_encambio_de_pagina="1" condicion="/*[type=SQL]*/&#xD;&#xA;WHERE REPOSITORIOELEMENTO.repositorio=[%IdEnEjecucion%]" orderby="ORDER BY REPOSITORIOELEMENTO.ORDEN " accion_al_editar="" tipomacro="106" orden="1" ncol="12" primeroenlinea="1">
+          <pa padreid="repositorio.dsgeneral|repositorioselementos" nombre="count_reg_txt" valor="¬Elementos" sql="" />
+          <pa padreid="repositorio.dsgeneral|repositorioselementos" nombre="del_reg_tooltip" valor="¬Borrar elemento" sql="" />
+          <pa padreid="repositorio.dsgeneral|repositorioselementos" nombre="del_reg_txt_confirm" valor="¬Se va a borrar el elemento. ¿Es esto lo que quiere hacer?" sql="" />
+          <pa padreid="repositorio.dsgeneral|repositorioselementos" nombre="new_reg_tooltip" valor="¬Nuevo elemento" sql="" />
+          <pa padreid="repositorio.dsgeneral|repositorioselementos" nombre="new_reg_txt" valor="¬Nuevo elemento" sql="" />
+          <pa padreid="repositorio.dsgeneral|repositorioselementos" nombre="no_filas_txt" valor="¬No hay elementos " sql="" />
+          <pa padreid="repositorio.dsgeneral|repositorioselementos" nombre="use_sqlcamposvista" valor="0" sql="" />
+          <calculo padreid="repositorio.dsgeneral|repositorioselementos" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/&#xA;//Repositorio Elemento&#xA;//[@PGS!Tipo]&#xA;var tipoR=$F.getValue(&quot;tipo&quot;);&#xA;$sys.trace(tipoR);&#xA;if (tipoR==1) {$this.visible=true; $this.enabled=true; $sys.trace(&quot;visible&quot;);}&#xA;else {$this.visible=false; $this.enabled=false; $sys.trace(&quot;oculto&quot;);}" orden="0" asincrono="1" />
+        </campo>
+      </bloque>
+    </bloque>
+  </tab>
+</form>

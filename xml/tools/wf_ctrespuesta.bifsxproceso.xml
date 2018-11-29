@@ -1,0 +1,18 @@
+<form id="wf_ctrespuesta.bifsxproceso" tablaanexa="WF_CTRESPUESTA" nbcampoid="ID" nombreexterno="bifsxproceso" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT WF_CTRESPUESTA.Id,&#xD;dbo.PonerPuntuacionNumericaEntera(WF_CTRESPUESTA.Id) AS [Id|¬Id],WF_CTRESPUESTA.Texto AS [Texto|¬Texto],&#xD;Comentario_obligatorio_TB.DESCRIPCION AS [Comentario_obligatorio|¬Comentario_Obligatorio],&#xD;dbo.PonerPuntuacionNumericaEntera(WF_CTRESPUESTA.Peso) AS [Peso|¬Peso],dbo.PonerPuntuacionNumericaEntera(WF_CTRESPUESTA.Orden) AS [Orden|¬Orden]&#xD; FROM WF_CTRESPUESTA&#xD;LEFT OUTER JOIN CatalogFormularioDesignerSiNo Comentario_obligatorio_TB ON WF_CTRESPUESTA.Comentario_obligatorio=Comentario_obligatorio_TB.ID&#xD; WHERE WF_CTRESPUESTA.Id=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="" version="3">
+  <pa id="wf_ctrespuesta.bifsxproceso|responsive" padreid="wf_ctrespuesta.bifsxproceso" nombre="responsive" valor="1" sql="" />
+  <pa id="wf_ctrespuesta.bifsxproceso|responsivestatus" padreid="wf_ctrespuesta.bifsxproceso" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="wf_ctrespuesta.bifsxproceso" id="2052" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="wf_ctrespuesta.bifsxproceso" id="2053" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2052" visible="1" orden="1">
+      <campo id="wf_ctrespuesta.bifsxproceso|id" tipo="2" titulo="¬Id" campo="ID" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="0" etiqueta="2" tipomacro="2" orden="1" ncol="1" primeroenlinea="0" />
+      <campo id="wf_ctrespuesta.bifsxproceso|texto" tipo="1" titulo="¬Texto" campo="TEXTO" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="100" password="" multilinea="0" tipomacro="1" orden="2" ncol="2" primeroenlinea="1" />
+      <campo id="wf_ctrespuesta.bifsxproceso|comentario_obligatorio" tipo="1005" titulo="¬Comentario_Obligatorio" campo="COMENTARIO_OBLIGATORIO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="3" ncol="2" primeroenlinea="0">
+        <tipocampo id="1005" nombre="*Selector Si/No" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="CATALOGFORMULARIODESIGNERSINO" nbcampoid="ID" nbcampotitulo="CATALOGFORMULARIODESIGNERSINO.DESCRIPCION" sqlinit="SELECT ID AS ID,DESCRIPCION  AS TITULO FROM CatalogFormularioDesignerSiNo" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+        <pa id="wf_ctrespuesta.bifsxproceso|comentario_obligatorio|selector_abierto" padreid="wf_ctrespuesta.bifsxproceso|comentario_obligatorio" propiedad="selector_abierto" valor="" />
+      </campo>
+      <campo id="wf_ctrespuesta.bifsxproceso|peso" tipo="2" titulo="¬Peso" campo="PESO" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="4" ncol="1" primeroenlinea="0">
+        <calculo padreid="wf_ctrespuesta.bifsxproceso|peso" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/ &#xA;/**/&#xA;if (! $F.getValue(&quot;peso&quot;)) { $this.value=1;}" orden="0" asincrono="1" />
+      </campo>
+      <campo id="wf_ctrespuesta.bifsxproceso|orden" tipo="2" titulo="¬Orden" campo="ORDEN" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="5" ncol="1" primeroenlinea="0" />
+    </bloque>
+  </tab>
+</form>

@@ -1,0 +1,1 @@
+(function(a){a.timeEntry.regionalOptions.nl={show24Hours:true,separator:":",ampmPrefix:"",ampmNames:["AM","PM"],spinnerTexts:["Nu","Vorig veld","Volgend veld","Verhoog","Verlaag"]};a.timeEntry.setDefaults(a.timeEntry.regionalOptions.nl)})(jQuery);

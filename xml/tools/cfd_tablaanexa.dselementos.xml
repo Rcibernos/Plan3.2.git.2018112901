@@ -1,0 +1,16 @@
+<form id="cfd_tablaanexa.dselementos" tablaanexa="CFD_TABLAANEXA" nbcampoid="CATALOGFORMULARIODESIGNER" nombreexterno="Dselementos" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT CFD_TABLAANEXA.CatalogFormularioDesigner,&#xD;CFD_TABLAANEXA.Nbcampoid AS [Nbcampoid|Campo ID],CFD_TABLAANEXA.Nombreexterno AS [Nombreexterno|Nombre],&#xD;CFD_TABLAANEXA.Tablaanexa AS [Tablaanexa|Tabla]&#xD; FROM CFD_TABLAANEXA&#xD; WHERE CFD_TABLAANEXA.CatalogFormularioDesigner=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="" version="3">
+  <pa id="cfd_tablaanexa.dselementos|responsive" padreid="cfd_tablaanexa.dselementos" nombre="responsive" valor="1" sql="" />
+  <pa id="cfd_tablaanexa.dselementos|responsivestatus" padreid="cfd_tablaanexa.dselementos" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="cfd_tablaanexa.dselementos" id="1941" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="cfd_tablaanexa.dselementos" id="1942" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1941" visible="1" orden="1">
+      <campo id="cfd_tablaanexa.dselementos|nbcampoid" tipo="1" titulo="Campo ID" campo="NBCAMPOID" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="1" ncol="2" primeroenlinea="1">
+        <calculo padreid="cfd_tablaanexa.dselementos|nbcampoid" tipo="1" bdtipo="3" calculo="/*[type=SQL]*/&#xD;&#xA;/*[type=sql]*/&#xD;&#xD;&#xA;--[@PGS!Tablaanexa]" orden="0" asincrono="1" />
+      </campo>
+      <campo id="cfd_tablaanexa.dselementos|nombreexterno" tipo="1" titulo="Nombre" campo="NOMBREEXTERNO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="2" ncol="2" primeroenlinea="0" />
+      <campo id="cfd_tablaanexa.dselementos|tablaanexa" tipo="1" titulo="Tabla" campo="TABLAANEXA" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="3" ncol="2" primeroenlinea="0">
+        <calculo padreid="cfd_tablaanexa.dselementos|tablaanexa" tipo="1" bdtipo="3" calculo="/*[type=SQL]*/&#xD;&#xA;/*[type=sql]*/&#xD;&#xD;&#xA;--[@PGS!Tablaanexa]" orden="0" asincrono="1" />
+      </campo>
+    </bloque>
+  </tab>
+  <calculo id="cfd_tablaanexa.dselementos|cfd_tablaanexa.dselementos|207" padreid="cfd_tablaanexa.dselementos" tipo="207" calculo="/*[type=jscript]*/ &#xA;var tabla = $F.getValue(&quot;TablaAnexa&quot;)&#xA;var id = $F.getValue(&quot;NBCampoId&quot;)&#xA;var nombre = $F.getValue(&quot;Nombreexterno&quot;)&#xA;&#xA;var nbelem = tabla + &quot;|&quot; + id + &quot;|&quot; + nombre&#xA;AddNewElement(nbelem, &quot;&quot;, &quot;&quot;, 0)" orden="0" asincrono="1" />
+</form>

@@ -1,0 +1,22 @@
+<form id="cfd_campo.dscampos" tablaanexa="CFD_CAMPO" nbcampoid="NOMBRE" nombreexterno="DsCampos" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT CFD_CAMPO.Nombre,&#xD;CFD_CAMPO.Campo AS [Campo|Nombre Campo],Tipo_TB.Nombre AS [Tipo|Tipo de Campo],CFD_CAMPO.Subtipo AS [Subtipo|SubTipo],&#xD;dbo.PonerSiNo(CFD_CAMPO.Subtipo1) AS [Subtipo1|Tabla Existente]&#xD; FROM CFD_CAMPO&#xD;LEFT OUTER JOIN CFD_TIPODATOS Tipo_TB ON CFD_CAMPO.Tipo=Tipo_TB.Id&#xD; WHERE CFD_CAMPO.Nombre=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="" version="3">
+  <pa id="cfd_campo.dscampos|responsive" padreid="cfd_campo.dscampos" nombre="responsive" valor="1" sql="" />
+  <pa id="cfd_campo.dscampos|responsivestatus" padreid="cfd_campo.dscampos" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="cfd_campo.dscampos" id="1943" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="cfd_campo.dscampos" id="1944" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1943" visible="1" orden="1">
+      <campo id="cfd_campo.dscampos|campo" tipo="1" titulo="Nombre Campo" campo="CAMPO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="1" ncol="2" primeroenlinea="1">
+        <pa padreid="cfd_campo.dscampos|campo" nombre="autocomplete" valor="1" sql="" />
+        <pa padreid="cfd_campo.dscampos|campo" nombre="autocomplete_script" valor="" sql="SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS &#xA;WHERE TABLE_NAME = 'CFD_CAMPO' and COLUMN_NAME like [%pattern%]" />
+      </campo>
+      <campo id="cfd_campo.dscampos|tipo" tipo="1264" titulo="Tipo de Campo" campo="TIPO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="-1" orden="2" ncol="4" primeroenlinea="0">
+        <tipocampo id="1264" nombre="*Selector CFD_TIPODATOS" catalogtipocontrol="3" padre="" tiposql="int" tipopgs="Combo" vinculada="0" nbtabla="CFD_TIPODATOS" nbcampoid="ID" nbcampotitulo="CFD_TIPODATOS.NOMBRE" sqlinit="/*[type=SQL]*/&#xD;&#xA;SELECT ID,NOMBRE AS TITULO FROM CFD_TIPODATOS ORDER BY NOMBRE" sqlinithijo="" sqlleerregistro="" tiposcondicion="=!" formulasqlcamposvista="" sistema="0" valoresfijos="0" campoid="" campotitulo="" />
+        <pa id="cfd_campo.dscampos|tipo|selector_abierto" padreid="cfd_campo.dscampos|tipo" propiedad="selector_abierto" valor="" />
+      </campo>
+      <campo id="cfd_campo.dscampos|subtipo" tipo="1" titulo="SubTipo" campo="SUBTIPO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="3" ncol="2" primeroenlinea="0">
+        <calculo padreid="cfd_campo.dscampos|subtipo" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/ &#xA;var Tipo = $F.getValue(&quot;Tipo&quot;);&#xA;&#xA;if (Tipo == '1') {&#xA;    $f.visible = true;&#xA;    $this.title = &quot;Num. Caracteres&quot;;&#xA;} else if (Tipo == '3'){&#xA;    $f.visible = true;&#xA;    $this.title = &quot;Num. Decimales&quot;;&#xA;} else {&#xA;    $f.visible = false;&#xA;}" orden="0" asincrono="1" />
+      </campo>
+      <campo id="cfd_campo.dscampos|subtipo1" tipo="11" titulo="Tabla Existente" campo="SUBTIPO1" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="11" orden="4" ncol="1" primeroenlinea="0">
+        <calculo padreid="cfd_campo.dscampos|subtipo1" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/ &#xA;if ($F.getValue(&quot;Tipo&quot;) == 106) {&#xA;    $f.visible = true;&#xA;} else {&#xA;   $f.visible = false;&#xA;}" orden="0" asincrono="1" />
+      </campo>
+    </bloque>
+  </tab>
+</form>

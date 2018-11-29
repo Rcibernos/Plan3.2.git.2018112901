@@ -1,0 +1,21 @@
+<form id="cfd_tipodatos.general" tablaanexa="CFD_TIPODATOS" nbcampoid="ID" nombreexterno="General" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT CFD_TIPODATOS.Id,&#xD;CFD_TIPODATOS.Nombre AS [Nombre|Nombre],CFD_TIPODATOS.Nbtabla AS [Nbtabla|Tabla Datos],&#xD;CFD_TIPODATOS.Nbcampoid AS [Nbcampoid|Campo ID],CFD_TIPODATOS.Nbcampotitulo AS [Nbcampotitulo|Campo título],&#xD;dbo.PonerPuntuacionNumericaEntera(CFD_TIPODATOS.Padre) AS [Padre|Padre]&#xD; FROM CFD_TIPODATOS&#xD; WHERE CFD_TIPODATOS.Id=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="" version="3">
+  <pa id="cfd_tipodatos.general|responsive" padreid="cfd_tipodatos.general" nombre="responsive" valor="1" sql="" />
+  <pa id="cfd_tipodatos.general|responsivestatus" padreid="cfd_tipodatos.general" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="cfd_tipodatos.general" id="1976" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="cfd_tipodatos.general" id="1977" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1976" visible="1" orden="1">
+      <elementodiseno id="2929" titulo="Nuevo Texto" catalogelementodiseno="2" ancho="0" alto="18" orden="1" ncol="2" primeroenlinea="0">
+        <calculo padreid="2929" tipo="2" calculo="/*[type=jscript]*/" />
+        <calculo padreid="2929" tipo="3" calculo="/*[type=jscript]*/&#xA;&#xA;var padre = $db.executeSql(&quot;SELECT padre FROM CFD_TIPODATOS WHERE id =&quot; + $sys.idSelected);&#xA;&#xA;$this.visible = true;&#xA;&#xA;if (!padre.getValue(0,0)) {&#xA;    $this.title = '¤297|';&#xA;} else {&#xA;    $this.title = '¤299|';&#xA;}" />
+      </elementodiseno>
+      <campo id="cfd_tipodatos.general|id" tipo="2" titulo="id" campo="ID" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="0" etiqueta="2" tipomacro="2" orden="2" ncol="1" primeroenlinea="0" />
+      <campo id="cfd_tipodatos.general|nombre" tipo="1" titulo="Nombre" campo="NOMBRE" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="3" ncol="2" primeroenlinea="1" />
+      <campo id="cfd_tipodatos.general|nbtabla" tipo="1" titulo="Tabla Datos" campo="NBTABLA" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="4" ncol="2" primeroenlinea="0" />
+      <campo id="cfd_tipodatos.general|nbcampoid" tipo="1" titulo="Campo ID" campo="NBCAMPOID" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="5" ncol="2" primeroenlinea="0" />
+      <campo id="cfd_tipodatos.general|nbcampotitulo" tipo="1" titulo="Campo título" campo="NBCAMPOTITULO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" longitud="255" password="" multilinea="0" tipomacro="1" orden="6" ncol="2" primeroenlinea="0" />
+      <campo id="cfd_tipodatos.general|padre" tipo="2" titulo="Padre" campo="PADRE" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="7" ncol="3" primeroenlinea="0">
+        <pa padreid="cfd_tipodatos.general|padre" nombre="cfcolumn_visible" valor="0" sql="" />
+        <calculo padreid="cfd_tipodatos.general|padre" tipo="1" bdtipo="3" calculo="/*[type=sql]*/&#xD;&#xA;" orden="0" asincrono="1" />
+      </campo>
+    </bloque>
+  </tab>
+</form>

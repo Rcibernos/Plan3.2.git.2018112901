@@ -1,0 +1,1 @@
+Moviendo=0;function Get_evtX(a){if(window.event){return window.event.clientX}else{if(a.clientX){return a.clientX}else{return a.pageX}}}function Get_evtY(a){if(window.event){return window.event.clientY}else{if(a.clientY){return a.clientY}else{return a.pageY}}};

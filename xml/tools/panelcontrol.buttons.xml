@@ -1,0 +1,11 @@
+<form id="panelcontrol.buttons" tablaanexa="PANELCONTROL" nbcampoid="ID" nombreexterno="buttons" nbbtablaoriginal="" ayuda="" sqlcamposvista="" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="10" version="3">
+  <pa id="panelcontrol.buttons|responsive" padreid="panelcontrol.buttons" nombre="responsive" valor="1" sql="" />
+  <pa id="panelcontrol.buttons|responsivestatus" padreid="panelcontrol.buttons" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="panelcontrol.buttons" id="2279" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="panelcontrol.buttons" id="2280" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2279" visible="1" orden="1">
+      <elementodiseno id="2981" titulo="OpènDisForm" catalogelementodiseno="2" ancho="7" alto="18" orden="1" ncol="2" primeroenlinea="0">
+        <calculo padreid="2981" tipo="2" calculo="/*[type=jscript]*/&#xA;$this.PGS(&quot;url&quot;,[&quot;./WFDisform.aspx&quot;,&quot;_tab&quot;]);" />
+      </elementodiseno>
+    </bloque>
+  </tab>
+</form>

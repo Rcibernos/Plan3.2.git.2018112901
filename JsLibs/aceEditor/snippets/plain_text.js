@@ -1,0 +1,1 @@
+define("ace/snippets/plain_text",["require","exports","module"],function(c,a,b){a.snippetText=undefined;a.scope="plain_text"});

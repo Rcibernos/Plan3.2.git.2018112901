@@ -1,0 +1,48 @@
+<form id="panelcontrol.inicio" tablaanexa="PANELCONTROL" nbcampoid="ID" nombreexterno="Inicio" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT PanelControl.Id&#xD; FROM PanelControl&#xD; WHERE PanelControl.Id=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="" version="3">
+  <pa id="panelcontrol.inicio|responsive" padreid="panelcontrol.inicio" nombre="responsive" valor="1" sql="" />
+  <pa id="panelcontrol.inicio|responsivestatus" padreid="panelcontrol.inicio" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="panelcontrol.inicio" id="1887" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="panelcontrol.inicio" id="1888" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1887" visible="1" orden="1">
+      <bloque catalogformulariodesigner="panelcontrol.inicio" id="1900" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="1888" visible="1" orden="2">
+        <elementodiseno id="2940" titulo="Nuevo Texto" catalogelementodiseno="2" ancho="7" alto="18" orden="0" ncol="4" primeroenlinea="0" />
+        <elementodiseno id="2939" titulo="Supercalifragilistcoespialidoso" catalogelementodiseno="2" ancho="7" alto="18" orden="0" ncol="4" primeroenlinea="0" />
+        <campo id="panelcontrol.inicio|personal" tipo="1" titulo="Persona" campo="PERSONAL" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="60" etiqueta="2" longitud="255" multilinea="0" tipomacro="1" orden="1" ncol="3" primeroenlinea="0" />
+      </bloque>
+      <bloque catalogformulariodesigner="panelcontrol.inicio" id="1901" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="1888" visible="1" orden="3">
+        <campo id="panelcontrol.inicio|id" tipo="2" titulo="Identificador" campo="ID" visible="1" sololectura="0" obligatorio="1" ancho="0" ayuda="" alto="25" etiqueta="2" tipomacro="2" orden="1" ncol="3" primeroenlinea="0" />
+        <campo id="panelcontrol.inicio|lista" tipo="25" titulo="Lista" campo="LISTA" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="25" etiqueta="2" tipomacro="25" orden="2" ncol="3" primeroenlinea="0">
+          <pa padreid="panelcontrol.inicio|lista" nombre="data_fixed" valor="1|2|3|4|5" sql="" />
+          <calculo padreid="panelcontrol.inicio|lista" tipo="1" bdtipo="3" calculo="/*[type=sql]*/&#xA;select '[@PGS!NotSet]',0,null,isnull([@PGS!VERLISTA],0)" orden="0" asincrono="1" />
+        </campo>
+        <campo id="panelcontrol.inicio|verlista" tipo="11" titulo="Ver Lista" campo="VERLISTA" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="25" etiqueta="2" tipomacro="11" orden="3" ncol="1" primeroenlinea="0" />
+        <bloque catalogformulariodesigner="panelcontrol.inicio" id="2003" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="1901" visible="1" orden="4">
+          <elementodiseno id="2921" titulo="Nuevo Texto 2" catalogelementodiseno="2" ancho="0" alto="25" orden="1" ncol="4" primeroenlinea="0" />
+          <elementodiseno id="2903" titulo="Prueba calculo" catalogelementodiseno="2" ancho="0" alto="25" orden="2" ncol="4" primeroenlinea="0">
+            <pa padreid="2903" nombre="msjayuda" valor="hola" />
+            <calculo padreid="2903" tipo="2" calculo="/*[type=sql]*/&#xA;--probando calculos&#xA;SELECT '[@PGSFunc!Info (Holiiis)]'" />
+          </elementodiseno>
+          <elementodiseno id="2904" titulo="Nuevo Texto" catalogelementodiseno="2" ancho="0" alto="25" orden="3" ncol="4" primeroenlinea="0" />
+        </bloque>
+      </bloque>
+    </bloque>
+  </tab>
+  <tab catalogformulariodesigner="panelcontrol.inicio" id="2119" titulo="Prueba ED" cssclass="" orden="1">
+    <bloque catalogformulariodesigner="panelcontrol.inicio" id="2120" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2119" visible="1" orden="1">
+      <elementodiseno id="2938" titulo="Nuevo Texto" catalogelementodiseno="6" ancho="7" alto="95" orden="0" ncol="4" primeroenlinea="0">
+        <calculo padreid="2938" tipo="3" calculo="/*[type=sql]*/&#xD;&#xA;select 'panelcontrol.nuevoform'" />
+      </elementodiseno>
+      <elementodiseno id="2917" titulo="Prueba Altura" catalogelementodiseno="5" ancho="0" alto="25" orden="1" ncol="4" primeroenlinea="0">
+        <pa padreid="2917" nombre="cssclass" valor="bueno" />
+        <pa padreid="2917" nombre="msjayuda" valor="vaya" />
+        <calculo padreid="2917" tipo="3" calculo="/*[type=sql]*/&#xD;&#xA;select '&lt;center&gt;&lt;h1&gt;HOLA A TODOS&lt;/h1&gt;&lt;/center&gt;'" />
+      </elementodiseno>
+    </bloque>
+  </tab>
+  <bloque catalogformulariodesigner="panelcontrol.inicio" id="1892" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1891" visible="1" orden="1" />
+  <bloque catalogformulariodesigner="panelcontrol.inicio" id="1946" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1945" visible="1" orden="1" />
+  <tab catalogformulariodesigner="panelcontrol.inicio" id="2121" titulo="prueba2" cssclass="" orden="3">
+    <bloque catalogformulariodesigner="panelcontrol.inicio" id="2122" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2121" visible="1" orden="1">
+      <elementodiseno id="2901" titulo="Nuevo Texto" catalogelementodiseno="2" ancho="0" alto="25" orden="1" ncol="3" primeroenlinea="0" />
+    </bloque>
+  </tab>
+</form>

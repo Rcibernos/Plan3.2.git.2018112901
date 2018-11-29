@@ -1,0 +1,1 @@
+(function(a){a.timeEntry.regionalOptions.ro={show24Hours:true,separator:":",ampmPrefix:"",ampmNames:["AM","PM"],spinnerTexts:["Acum","Campul Anterior","Campul Urmator","Mareste","Micsoreaza"]};a.timeEntry.setDefaults(a.timeEntry.regionalOptions.ro)})(jQuery);

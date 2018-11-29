@@ -1,0 +1,1 @@
+(function(a){a.timeEntry.regionalOptions.lv={show24Hours:true,separator:":",ampmPrefix:"",ampmNames:["AM","PM"],spinnerTexts:["Pašlaik","Iepriekšejais lauks","Nakamais lauks","Palielinat","Samazinat"]};a.timeEntry.setDefaults(a.timeEntry.regionalOptions.lv)})(jQuery);

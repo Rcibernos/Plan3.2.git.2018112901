@@ -1,0 +1,18 @@
+<form id="catalogicono.edicion" tablaanexa="CATALOGICONO" nbcampoid="ID" nombreexterno="Edicion" nbbtablaoriginal="" ayuda="" sqlcamposvista="SELECT CATalogicONO.iD,&#xD;dbo.PonerPuntuacionNumericaEntera(CATalogicONO.Id) AS [Id|¬Id],dbo.ComprobarSiHayDocumento(CATalogicONO.Nombre) AS [Nombre|¬Imagen]&#xD; FROM CATalogicONO&#xD; WHERE CATalogicONO.iD=" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="1" condiferencias="0" ncol="6" version="3">
+  <pa id="catalogicono.edicion|responsive" padreid="catalogicono.edicion" nombre="responsive" valor="1" sql="" />
+  <pa id="catalogicono.edicion|responsivestatus" padreid="catalogicono.edicion" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="catalogicono.edicion" id="1949" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="catalogicono.edicion" id="1950" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1949" visible="1" orden="1">
+      <bloque catalogformulariodesigner="catalogicono.edicion" id="1951" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="1950" visible="1" orden="1">
+        <campo id="catalogicono.edicion|id" tipo="2" titulo="¬Id" campo="ID" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="20" etiqueta="2" tipomacro="2" orden="1" ncol="1" primeroenlinea="1">
+          <calculo padreid="catalogicono.edicion|id" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/&#xA;if ($F.getValue(&quot;id&quot;)) return;&#xA;var Id=0;&#xA;if ($db.type==&quot;oracle&quot;) &#xA;{Id=$db.executeSql(&quot;SELECT NVL(MAX(ID),0)+1 FROM CATALOGICONO&quot;).getValue(0,0);}&#xA;else if ($db.type==&quot;postgresql&quot;) &#xA;{Id=$db.executeSql(&quot;SELECT COALESCE(MAX(ID),0)+1 FROM CATALOGICONO&quot;).getValue(0,0);}&#xA;else &#xA;{Id=$db.executeSql(&quot;SELECT isnull(MAX(id),0)+1 FROM catalogicono&quot;).getValue(0,0);}&#xA;&#xA;if (Id &lt; 1000) &#xA;{ $this.value = 1000;}&#xA;else &#xA;{ $this.value=Id;}" orden="0" asincrono="1" />
+        </campo>
+      </bloque>
+      <bloque catalogformulariodesigner="catalogicono.edicion" id="1964" titulo="" cssclass="" ncol="12" primeroenlinea="0" padre="1950" visible="1" orden="2">
+        <campo id="catalogicono.edicion|nombre" tipo="16" titulo="¬Imagen" campo="NOMBRE" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="200" etiqueta="2" tipomacro="16" orden="1" ncol="12" primeroenlinea="1">
+          <pa padreid="catalogicono.edicion|nombre" nombre="file_datacolumnname" valor="archivo" sql="" />
+        </campo>
+      </bloque>
+    </bloque>
+  </tab>
+</form>

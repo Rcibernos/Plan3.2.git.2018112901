@@ -1,0 +1,30 @@
+<form id="cfd_listacalculos.general" tablaanexa="CFD_LISTACALCULOS" nbcampoid="ID" nombreexterno="cfd_listacalculos.general" nbbtablaoriginal="" ayuda="" sqlcamposvista="" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="1" condiferencias="0" ncol="10" version="3">
+  <pa id="cfd_listacalculos.general|responsive" padreid="cfd_listacalculos.general" nombre="responsive" valor="1" sql="" />
+  <pa id="cfd_listacalculos.general|responsivestatus" padreid="cfd_listacalculos.general" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="cfd_listacalculos.general" id="2207" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="cfd_listacalculos.general" id="2208" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2207" visible="1" orden="1">
+      <campo id="cfd_listacalculos.general|formulario" tipo="1" titulo="Formulario" campo="FORMULARIO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="500" password="" multilinea="0" tipomacro="1" orden="1" ncol="4" primeroenlinea="0" />
+      <campo id="cfd_listacalculos.general|elemento" tipo="1" titulo="Elemento" campo="ELEMENTO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="500" password="" multilinea="0" tipomacro="1" orden="2" ncol="4" primeroenlinea="0" />
+      <campo id="cfd_listacalculos.general|tipoelemento" tipo="1" titulo="¬Tipo Elemento" campo="TIPOELEMENTO" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="128" password="" multilinea="0" tipomacro="1" orden="3" ncol="3" primeroenlinea="0" />
+      <campo id="cfd_listacalculos.general|tabla" tipo="1" titulo="Tabla" campo="TABLA" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="26" password="" multilinea="0" tipomacro="1" orden="4" ncol="4" primeroenlinea="0" />
+      <campo id="cfd_listacalculos.general|detalle" tipo="1" titulo="Detalle" campo="DETALLE" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="77" password="" multilinea="0" tipomacro="1" orden="5" ncol="4" primeroenlinea="0" />
+      <elementodiseno id="2956" titulo="Abrir Formulario" catalogelementodiseno="2" ancho="7" alto="18" orden="6" ncol="2" primeroenlinea="0">
+        <pa padreid="2956" nombre="cssclass" valor=" PWButton" />
+        <calculo padreid="2956" tipo="2" calculo="/*[type=jscript]*/ &#xA;&#xA;var formulario = $F.getValue(&quot;EDITFORM&quot;).toLowerCase();&#xA;$sys.trace('formulario = ' + formulario);&#xA;&#xA;if ($F.getValue(&quot;EDITID&quot;)) {&#xA;    var id = $F.getValue(&quot;EDITID&quot;);&#xA;    $sys.trace('id = ' + id);&#xA;    $this.PGS('OpenForm', [formulario, id, 'W', '1']);&#xA;} else {&#xA;    //$this.PGS('OpenForm', [formulario, '', 'W', '1']); //Antigüo modo&#xA;    $this.PGS('url',[&quot;./WFdisform.aspx?nbform=&quot; + formulario.replace(&quot;.&quot;,'%2e').replace('_','%5f'), formulario, 1, 'resizable=1,scrollbars=1,width=1100,height=800,left=90,top=90']);&#xA;}" />
+        <calculo padreid="2956" tipo="3" calculo="/*[type=jscript]*/ &#xA;&#xA;if (!$F.getValue(&quot;EDITFORM&quot;)) {&#xA;    $this.visible = false;&#xA;} &#xA;&#xA;$sys.trace('Visibilidad bótón = ' + $this.visible);" />
+      </elementodiseno>
+      <campo id="cfd_listacalculos.general|calculo_varchar" tipo="26" titulo="Cálculo Varchar" campo="CALCULO_VARCHAR" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="600" etiqueta="2" tipomacro="26" orden="7" ncol="12" primeroenlinea="0">
+        <calculo padreid="cfd_listacalculos.general|calculo_varchar" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/ &#xA;&#xA;if (!$F.getValue('calculo_varchar')) {&#xA;    $this.visible = false;&#xA;} else {&#xA;    $this.visible = true;&#xA;}&#xA;&#xA;$sys.trace('Value = ' + $F.getValue('calculo_varchar'));&#xA;$sys.trace('Visible =' + $this.visible);" orden="0" asincrono="1" />
+      </campo>
+      <campo id="cfd_listacalculos.general|calculo_text" tipo="26" titulo="Cálculo Texto" campo="CALCULO_TEXT" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="605" etiqueta="2" tipomacro="26" orden="9" ncol="12" primeroenlinea="0">
+        <calculo padreid="cfd_listacalculos.general|calculo_text" tipo="1" bdtipo="1" calculo="/*[type=jscript]*/ &#xA;&#xA;if (!$F.getValue('calculo_text')) {&#xA;    $this.visible = false;&#xA;} else {&#xA;    $this.visible = true;&#xA;}&#xA;&#xA;$sys.trace('Value = ' + $F.getValue('calculo_text'));&#xA;$sys.trace('Visible =' + $this.visible);" orden="0" asincrono="1" />
+      </campo>
+      <elementodiseno id="2954" titulo="El cálculo guardado está vacio" catalogelementodiseno="2" ancho="7" alto="18" orden="10" ncol="12" primeroenlinea="0">
+        <pa padreid="2954" nombre="cssclass" valor="PWLabel PWAlerta_Amarillo center PWTitulo3" />
+        <calculo padreid="2954" tipo="3" calculo="/*[type=jscript]*/ &#xA;&#xA;if (!$F.getValue('calculo_varchar') &amp; !$F.getValue('calculo_text')) {&#xA;    $this.visible = true;&#xA;} else {&#xA;    $this.visible = false;&#xA;}&#xA;&#xA;$sys.trace('calculo_varchar: ' + !$F.getValue('calculo_varchar'));&#xA;$sys.trace('calculo_text: ' + !$F.getValue('calculo_text'));" />
+      </elementodiseno>
+    </bloque>
+  </tab>
+  <campo id="cfd_listacalculos.general|editform" tipo="1" titulo="¬EDITFORM" campo="EDITFORM" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="500" password="" multilinea="0" tipomacro="1" orden="8" ncol="3" primeroenlinea="0" />
+  <campo id="cfd_listacalculos.general|editid" tipo="1" titulo="EDITID" campo="EDITID" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="10" password="" multilinea="0" tipomacro="1" orden="8" ncol="3" primeroenlinea="0" />
+</form>

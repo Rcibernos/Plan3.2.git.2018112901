@@ -1,0 +1,11 @@
+<form id="emailevento.general" tablaanexa="EMAILEVENTO" nbcampoid="ID" nombreexterno="¬General" nbbtablaoriginal="" ayuda="" sqlcamposvista="" dynaplantilla="" triggeralter="" estilo="" modocalculo="" nombrepadreid="" omitirpadreid="0" condiferencias="0" ncol="10" version="3">
+  <pa id="emailevento.general|responsive" padreid="emailevento.general" nombre="responsive" valor="1" sql="" />
+  <pa id="emailevento.general|responsivestatus" padreid="emailevento.general" nombre="responsivestatus" valor="rev2pa" sql="" />
+  <tab catalogformulariodesigner="emailevento.general" id="2355" titulo="" cssclass="" orden="0">
+    <bloque catalogformulariodesigner="emailevento.general" id="2356" titulo="" cssclass="" ncol="12" primeroenlinea="1" padre="2355" visible="1" orden="1">
+      <campo id="emailevento.general|id" tipo="2" titulo="¬Id" campo="ID" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" tipomacro="2" orden="1" ncol="1" primeroenlinea="0" />
+      <campo id="emailevento.general|descripcion" tipo="1" titulo="¬Descripción" campo="DESCRIPCION" visible="1" sololectura="1" obligatorio="0" ancho="0" ayuda="" alto="30" etiqueta="2" longitud="10" password="" multilinea="0" tipomacro="1" orden="2" ncol="3" primeroenlinea="0" />
+      <campo id="emailevento.general|txtsql" tipo="26" titulo="¬Script" campo="TXTSQL" visible="1" sololectura="0" obligatorio="0" ancho="0" ayuda="" alto="90" etiqueta="2" tipomacro="26" orden="3" ncol="7" primeroenlinea="0" />
+    </bloque>
+  </tab>
+</form>
